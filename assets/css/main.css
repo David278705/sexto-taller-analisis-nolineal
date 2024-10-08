@@ -1788,3 +1788,15 @@ body.is-article-visible #footer {
 body.is-preload #footer {
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    width: 60px;
+  }
+}
