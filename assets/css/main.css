@@ -1802,3 +1802,7 @@ body.is-preload #footer {
 		width: 60px;
 	}
 }
+
+img {
+	content-visibility: auto;
+}
