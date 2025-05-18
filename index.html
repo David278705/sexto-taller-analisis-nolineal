@@ -898,12 +898,63 @@
 				<!-- schedule -->
 				<article id="schedule">
 					<h2 class="major">Cronograma</h2>
-					<span class="image main">
-						<img
-							loading="lazy"
-							src="images/planetario.jpg"
-							alt="Imagen del evento" />
-					</span>
+					<style>
+						.image-gallery {
+							display: flex;
+							gap: 1rem;
+							justify-content: center;
+							flex-wrap: wrap;
+							margin-bottom: 2rem;
+						}
+
+						.image-gallery-item {
+							max-width: 48%;
+							text-align: center;
+						}
+
+						.image-gallery-item img {
+							width: 100%;
+							border-radius: 8px;
+						}
+
+						.image-gallery-item p {
+							color: white;
+							margin-top: 0.5rem;
+						}
+
+						@media (max-width: 768px) {
+							.image-gallery-item {
+								max-width: 100% !important;
+							}
+						}
+					</style>
+
+					<div class="image-gallery">
+						<div class="image-gallery-item">
+							<img
+								src="images/auditorio1.jpg"
+								alt="Auditorio 1"
+								loading="lazy" />
+							<p>Sala Magistral 2</p>
+						</div>
+
+						<div class="image-gallery-item">
+							<img
+								src="images/auditorio2.jpg"
+								alt="Auditorio 2"
+								loading="lazy" />
+							<p>Teatro Bellas Artes</p>
+						</div>
+					</div>
+
+					<em
+						><p>
+							Libro de resúmenes:
+							<a href="/Abstracts.pdf" target="_blank">
+								clic aquí</a
+							>
+						</p></em
+					>
 
 					<style>
 						.schedule-day {
@@ -968,12 +1019,14 @@
 								Contributions of Professor José Francisco
 								Caicedo to Nonlinear Analysis
 							</div>
-							<div class="schedule-speaker">Alfonso Castro</div>
+							<div class="schedule-speaker">
+								Alfonso Castro – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -982,7 +1035,9 @@
 								Applications of a Sub-Super Solution Theorem to
 								Elliptic Problems
 							</div>
-							<div class="schedule-speaker">Maya Chhetri</div>
+							<div class="schedule-speaker">
+								Maya Chhetri – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -990,7 +1045,9 @@
 							<div class="schedule-title">
 								Waves in Fluids: Generation and Propagation
 							</div>
-							<div class="schedule-speaker">David Andrade</div>
+							<div class="schedule-speaker">
+								David Andrade – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -999,12 +1056,14 @@
 								Large Time Behaviour of a Dispersive Time-Delay
 								Dynamical System
 							</div>
-							<div class="schedule-speaker">Fernando Gallego</div>
+							<div class="schedule-speaker">
+								Fernando Gallego – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1014,7 +1073,9 @@
 								Hamiltonian Elliptic Systems with Concave-Convex
 								Nonlinearities
 							</div>
-							<div class="schedule-speaker">Oscar Agudelo</div>
+							<div class="schedule-speaker">
+								Oscar Agudelo – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1023,7 +1084,9 @@
 								Applications of a Sub-Super Solution Theorem to
 								Elliptic Problems
 							</div>
-							<div class="schedule-speaker">Diana Sánchez</div>
+							<div class="schedule-speaker">
+								Diana Sánchez – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1031,13 +1094,15 @@
 							<div class="schedule-title">
 								About Some Generalized Nonlocal Diffusion Models
 							</div>
-							<div class="schedule-speaker">César Gómez</div>
+							<div class="schedule-speaker">
+								César Gómez – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">5:30–6:00</div>
 							<div class="schedule-title">
-								Presentación cultural: Danzas Trietnias
+								Acto cultural: Danzas Trietnias
 							</div>
 						</div>
 					</div>
@@ -1052,33 +1117,35 @@
 								Qualitative Analysis for a Pearl Model
 							</div>
 							<div class="schedule-speaker">
-								Alexander Gutierrez
+								Alexander Gutierrez – Sala Magistral 2 Bloque 13
 							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">9:00–10:00</div>
 							<div class="schedule-title">
-								Characterization of Triebel–Lizorkin Spaces via
+								Characterization of Triebel-Lizorkin Spaces via
 								the Continuous Wavelet Transform
 							</div>
 							<div class="schedule-speaker">
-								Marcelo dos Santos
+								Marcelo dos Santos – Sala Magistral 2 Bloque 13
 							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">10:30–11:30</div>
 							<div class="schedule-title">
 								On the Existence of Solitary Wave Solutions for
-								a Fifth Order Kaup-Kupershmidt-KdV Type Equation
+								a Fifth-Order Kaup-Kupershmidt-KdV Type Equation
 							</div>
-							<div class="schedule-speaker">Raúl Quintero</div>
+							<div class="schedule-speaker">
+								Raúl Quintero – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1087,7 +1154,9 @@
 								Existence and Nonexistence of Positive Solutions
 								for a Class of Quasilinear Problems
 							</div>
-							<div class="schedule-speaker">Emer Lopera</div>
+							<div class="schedule-speaker">
+								Emer Lopera – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1096,12 +1165,14 @@
 								On the Existence, Regularity and Control Theory
 								of Some Chemotaxis Model
 							</div>
-							<div class="schedule-speaker">Élder Villamizar</div>
+							<div class="schedule-speaker">
+								Élder Villamizar – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1110,7 +1181,9 @@
 								Positive Solutions for Slightly Subcritical
 								Quasilinear Problems
 							</div>
-							<div class="schedule-speaker">Duván Henao</div>
+							<div class="schedule-speaker">
+								Duván Henao – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1120,7 +1193,9 @@
 								Hamiltonian Elliptic Systems with Concave-Convex
 								Nonlinearities
 							</div>
-							<div class="schedule-speaker">Carlos Vélez</div>
+							<div class="schedule-speaker">
+								Carlos Vélez – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1128,7 +1203,9 @@
 							<div class="schedule-title">
 								The Laplacian Operator and Generalizations
 							</div>
-							<div class="schedule-speaker">Sigifredo Herrón</div>
+							<div class="schedule-speaker">
+								Sigifredo Herrón – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1137,13 +1214,15 @@
 								Existence of Weak Solutions for the Burgers
 								Equation with Time-Dependent Coefficient
 							</div>
-							<div class="schedule-speaker">Oscar Rojas</div>
+							<div class="schedule-speaker">
+								Oscar Rojas – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">6:30–7:00</div>
 							<div class="schedule-title">
-								Concierto: Sinfónica
+								Concierto Sinfónica
 							</div>
 						</div>
 
@@ -1164,21 +1243,25 @@
 							<div class="schedule-title">
 								An Example on the Quadrature Method
 							</div>
-							<div class="schedule-speaker">Diego Castro</div>
+							<div class="schedule-speaker">
+								Diego Castro – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">9:00–10:00</div>
 							<div class="schedule-title">
-								Characterization of Triebel–Lizorkin Spaces via
+								Characterization of Triebel-Lizorkin Spaces via
 								the Continuous Wavelet Transform
 							</div>
-							<div class="schedule-speaker">Jaime Navarro</div>
+							<div class="schedule-speaker">
+								Jaime Navarro – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1189,7 +1272,8 @@
 								Conditions
 							</div>
 							<div class="schedule-speaker">
-								Ratnasingham Shivaji
+								Ratnasingham Shivaji – Sala Magistral 2 Bloque
+								13
 							</div>
 						</div>
 
@@ -1199,7 +1283,9 @@
 								A Review on the Range of the Semilinear Wave
 								Equation with Non-Monotone Nonlinearity
 							</div>
-							<div class="schedule-speaker">Arturo Sanjuán</div>
+							<div class="schedule-speaker">
+								Arturo Sanjuán – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1208,12 +1294,14 @@
 								Existence of Multiple Solutions for a
 								Quasilinear Elliptic Problem
 							</div>
-							<div class="schedule-speaker">Jorge Cossio</div>
+							<div class="schedule-speaker">
+								Jorge Cossio – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1222,7 +1310,9 @@
 								Positive Solutions for Slightly Subcritical
 								Quasilinear Problems
 							</div>
-							<div class="schedule-speaker">Rosa Pardo</div>
+							<div class="schedule-speaker">
+								Rosa Pardo – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1231,7 +1321,9 @@
 								Gradient Systems of Polynomial Solutions to the
 								Laplace Equation
 							</div>
-							<div class="schedule-speaker">Oscar Ramírez</div>
+							<div class="schedule-speaker">
+								Oscar Ramírez – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1241,7 +1333,9 @@
 								Van der Waals–Cahn–Hilliard Equation with Volume
 								Constraint
 							</div>
-							<div class="schedule-speaker">Luis Osorio</div>
+							<div class="schedule-speaker">
+								Luis Osorio – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1252,7 +1346,7 @@
 								Coulomb-Like Friction Term
 							</div>
 							<div class="schedule-speaker">
-								Richard De la Cruz
+								Richard De la Cruz – Sala Magistral 2 Bloque 13
 							</div>
 						</div>
 
@@ -1273,7 +1367,9 @@
 							<div class="schedule-title">
 								Palabras de bienvenida
 							</div>
-							<div class="schedule-speaker">Yineth Arce</div>
+							<div class="schedule-speaker">
+								Yineth Arce – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1282,12 +1378,14 @@
 								A Metapopulation Model with Almost Periodic
 								Colonization and Extinction Rates
 							</div>
-							<div class="schedule-speaker">Pablo Amster</div>
+							<div class="schedule-speaker">
+								Pablo Amster – Sala Magistral 2 Bloque 13
+							</div>
 						</div>
 
 						<div class="schedule-card">
 							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Pausa para café</div>
+							<div class="schedule-title">Café</div>
 						</div>
 
 						<div class="schedule-card">
@@ -1299,7 +1397,7 @@
 
 						<div class="schedule-card">
 							<div class="schedule-time">11:30–17:30</div>
-							<div class="schedule-title">Salida turística</div>
+							<div class="schedule-title">Salida Turística</div>
 						</div>
 					</div>
 				</article>
@@ -1605,7 +1703,7 @@
 
 				<!-- ponencias -->
 				<article id="ponencias">
-					<h2 class="major">ponencias</h2>
+					<h2 class="major">abstract</h2>
 
 					<!-- Se mantiene la imagen principal o cualquier otro contenido original -->
 					<span class="image main">
