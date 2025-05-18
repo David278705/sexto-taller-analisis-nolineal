@@ -898,102 +898,321 @@
 				<!-- schedule -->
 				<article id="schedule">
 					<h2 class="major">Cronograma</h2>
-					<span class="image main"
-						><img loading="lazy" src="images/planetario.jpg" alt=""
-					/></span>
-					<em>En construcción...</em>
-					<!-- <table>
-						<tbody>
-							<tr class="even">
-								<td>Time/Day</td>
-								<td>Wednesday</td>
-								<td>Thursday</td>
-								<td>Friday</td>
-							</tr>
-							<tr class="odd">
-								<td>08:30 - 09:15</td>
-								<td>Registration/Opening</td>
-								<td>Oscar Agudelo II</td>
-								<td>Maya Chhetri I</td>
-							</tr>
-							<tr class="even">
-								<td>09:15 - 10:00</td>
-								<td>Jorge Cossio</td>
-								<td>Bernhard Ruf</td>
-								<td>Julio Rossi</td>
-							</tr>
-							<tr class="odd">
-								<td>10:00 - 10:45</td>
-								<td>Shivaji I</td>
-								<td>Carlos Vélez</td>
-								<td>Alfonso Castro I</td>
-							</tr>
-							<tr
-								class="even"
-								style="background-color: rgb(21, 180, 171)">
-								<td>10:45 - 11:00</td>
-								<td>Coffee</td>
-								<td>Coffee</td>
-								<td>Coffee</td>
-							</tr>
-							<tr class="odd">
-								<td>11:00 - 11:45</td>
-								<td>César Gómez</td>
-								<td>Pablo Amster I</td>
-								<td>Erwin Suazo</td>
-							</tr>
-							<tr class="even">
-								<td>11:45 - 12:35</td>
-								<td>Arturo Sanjuán</td>
-								<td>Emer Lopera</td>
-								<td>Rosa Pardo II</td>
-							</tr>
-							<tr class="odd" style="background-color: #bcf5a9">
-								<td>12:30 - 14:00</td>
-								<td>Lunch</td>
-								<td>Lunch</td>
-								<td>Lunch</td>
-							</tr>
-							<tr class="even">
-								<td>14:00 - 14:45</td>
-								<td>------</td>
-								<td>Rosa Pardo I</td>
-								<td>Maya Chhetri II</td>
-							</tr>
-							<tr class="odd">
-								<td>14:45 - 15:30</td>
-								<td>Oscar Agudelo I</td>
-								<td>Elder Villamizar</td>
-								<td>Victor Ardila</td>
-							</tr>
-							<tr class="even">
-								<td>15:30 - 16:15</td>
-								<td>Shivaji II</td>
-								<td>Rubén Dario Ortiz</td>
-								<td>Jose Escorcia</td>
-							</tr>
-							<tr
-								class="odd"
-								style="background-color: rgb(21, 180, 171)">
-								<td>16:15 - 16:30</td>
-								<td>Coffee</td>
-								<td>Coffee</td>
-								<td>Coffee</td>
-							</tr>
-							<tr class="even">
-								<td>16:30 - 17:15</td>
-								<td>Fernando Gallego</td>
-								<td>Pablo Amster II</td>
-								<td>Alfonso Castro II</td>
-							</tr>
-							<tr class="even">
-								<td>17:15 - --</td>
-								<td>Remembering Pachito</td>
-								<td>Sigifredo Herron</td>
-								<td>Lorena Salazar</td>
-							</tr>
-						</tbody>
-					</table> -->
+					<span class="image main">
+						<img
+							loading="lazy"
+							src="images/planetario.jpg"
+							alt="Imagen del evento" />
+					</span>
+
+					<style>
+						.schedule-day {
+							margin-top: 3rem;
+						}
+
+						.schedule-day h3 {
+							font-size: 1.3rem;
+							color: #ffffff;
+							border-left: 4px solid #0af;
+							padding-left: 12px;
+							margin-bottom: 1.5rem;
+							text-transform: uppercase;
+							letter-spacing: 1px;
+						}
+
+						.schedule-card {
+							background: rgba(255, 255, 255, 0.05);
+							border: 1px solid rgba(255, 255, 255, 0.1);
+							border-radius: 10px;
+							padding: 1rem 1.2rem;
+							margin-bottom: 1rem;
+							display: flex;
+							flex-direction: column;
+							transition: background 0.3s ease;
+						}
+
+						.schedule-card:hover {
+							background: rgba(255, 255, 255, 0.08);
+						}
+
+						.schedule-time {
+							font-weight: 600;
+							font-size: 0.9rem;
+							color: #0af;
+							margin-bottom: 0.2rem;
+						}
+
+						.schedule-description {
+							color: #e0e0e0;
+							font-size: 1rem;
+						}
+					</style>
+
+					<!-- Día: Miércoles -->
+					<div class="schedule-day">
+						<h3>Miércoles 28 de Mayo de 2025</h3>
+						<div class="schedule-card">
+							<div class="schedule-time">8:30–9:00</div>
+							<div class="schedule-description">
+								Ceremonia de Inauguración
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">9:00–10:00</div>
+							<div class="schedule-description">
+								Conferencia: Alfonso Castro
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:00–10:30</div>
+							<div class="schedule-description">
+								Pausa para café
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:30–11:30</div>
+							<div class="schedule-description">
+								Charla magistral: Maya Chhetri
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">11:30–12:00</div>
+							<div class="schedule-description">
+								Ponencia breve: David Andrade
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">2:30–3:00</div>
+							<div class="schedule-description">
+								Intervención académica: Fernando Gallego
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:00–3:30</div>
+							<div class="schedule-description">
+								Receso - Café
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:30–4:30</div>
+							<div class="schedule-description">
+								Conferencia: Oscar Agudelo
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">4:30–5:00</div>
+							<div class="schedule-description">
+								Presentación: Diana Sánchez
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:00–5:30</div>
+							<div class="schedule-description">
+								Participación artística: César Gómez
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:30–6:00</div>
+							<div class="schedule-description">
+								Evento cultural: Danzas Trietnias
+							</div>
+						</div>
+					</div>
+
+					<!-- Día: Jueves -->
+					<div class="schedule-day">
+						<h3>Jueves 29 de Mayo de 2025</h3>
+						<div class="schedule-card">
+							<div class="schedule-time">8:30–9:00</div>
+							<div class="schedule-description">
+								Apertura del día: Alexander Gutiérrez
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">9:00–10:00</div>
+							<div class="schedule-description">
+								Conferencia internacional: Marcelo dos Santos
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:00–10:30</div>
+							<div class="schedule-description">
+								Pausa para café
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:30–11:30</div>
+							<div class="schedule-description">
+								Conferencia: Raúl Quintero
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">11:30–12:00</div>
+							<div class="schedule-description">
+								Ponencia breve: Emer Lopera
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">2:30–3:00</div>
+							<div class="schedule-description">
+								Charla: Elde Villamizar
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:00–3:30</div>
+							<div class="schedule-description">
+								Café y Networking
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:30–4:30</div>
+							<div class="schedule-description">
+								Conferencia: Duván Henao
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">4:30–5:00</div>
+							<div class="schedule-description">
+								Presentación: Carlos Vélez
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:00–5:30</div>
+							<div class="schedule-description">
+								Diálogo: Sigifredo Herrón
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:30–6:00</div>
+							<div class="schedule-description">
+								Intervención: Óscar Rojas
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">6:30–7:00</div>
+							<div class="schedule-description">
+								Concierto: Sinfónica
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">7:30–8:30</div>
+							<div class="schedule-description">
+								Cena de Gala: “Mesón Español”
+							</div>
+						</div>
+					</div>
+
+					<!-- Día: Viernes -->
+					<div class="schedule-day">
+						<h3>Viernes 30 de Mayo de 2025</h3>
+						<div class="schedule-card">
+							<div class="schedule-time">8:30–9:00</div>
+							<div class="schedule-description">
+								Bienvenida: Diego Castro
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">9:00–10:00</div>
+							<div class="schedule-description">
+								Conferencia: Jaime Navarro
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:00–10:30</div>
+							<div class="schedule-description">
+								Pausa para café
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:30–11:30</div>
+							<div class="schedule-description">
+								Conferencia internacional: Ratnasingham Shivaji
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">11:30–12:00</div>
+							<div class="schedule-description">
+								Presentación: Arturo Sanjuán
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">2:30–3:00</div>
+							<div class="schedule-description">
+								Charla: Jorge Cossio
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:00–3:30</div>
+							<div class="schedule-description">
+								Café y descanso
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">3:30–4:30</div>
+							<div class="schedule-description">
+								Conferencia: Rosa Pardo
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">4:30–5:00</div>
+							<div class="schedule-description">
+								Ponencia: Óscar Ramírez
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:00–5:30</div>
+							<div class="schedule-description">
+								Intervención: Luis Osorio
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">5:30–6:00</div>
+							<div class="schedule-description">
+								Cierre académico: Richard De la Cruz
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">6:30–7:00</div>
+							<div class="schedule-description">
+								Presentación artística: Calle del Encuentro
+							</div>
+						</div>
+					</div>
+
+					<!-- Día: Sábado -->
+					<div class="schedule-day">
+						<h3>Sábado 31 de Mayo de 2025</h3>
+						<div class="schedule-card">
+							<div class="schedule-time">8:30–9:00</div>
+							<div class="schedule-description">
+								Apertura: Yineth Arce
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">9:00–10:00</div>
+							<div class="schedule-description">
+								Conferencia: Paablo Amster
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:00–10:30</div>
+							<div class="schedule-description">
+								Café y encuentro
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">10:30–11:30</div>
+							<div class="schedule-description">
+								Charla de cierre: Juan Carlos Hernández
+							</div>
+						</div>
+						<div class="schedule-card">
+							<div class="schedule-time">11:30–5:30</div>
+							<div class="schedule-description">
+								Excursión cultural y turística
+							</div>
+						</div>
+					</div>
 				</article>
 
 				<!-- Contact -->
