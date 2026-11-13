@@ -1,2224 +1,553 @@
 <!DOCTYPE html>
-<!--
-	VII taller de análisis no lineal y ecuaciones diferenciales parciales
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="es" class="no-js">
 	<head>
-		<title>VII taller de análisis no lineal</title>
 		<meta charset="utf-8" />
+		<script>document.documentElement.classList.remove("no-js")</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>VIII Taller de Análisis No Lineal y EDP · Pereira 2027</title>
 		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- Foto de pestaña -->
-		<link rel="icon" type="image/png" href="./images/logo-utp-square.png" />
-		<noscript
-			><link rel="stylesheet" href="assets/css/noscript.css"
-		/></noscript>
+			name="description"
+			content="VIII Taller Internacional de Análisis No Lineal y Ecuaciones Diferenciales Parciales. 2 al 5 de junio de 2027, Universidad Tecnológica de Pereira, Colombia." />
+		<meta name="theme-color" content="#0b1120" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="VIII Taller de Análisis No Lineal y EDP · Pereira 2027" />
+		<meta property="og:description" content="2 al 5 de junio de 2027 · Universidad Tecnológica de Pereira, Colombia." />
+		<meta property="og:image" content="images/2027/og.jpg" />
+		<link rel="icon" type="image/png" href="images/2027/favicon.png" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Schibsted+Grotesk:wght@400..700&display=swap" />
+		<link rel="preload" as="image" href="images/2027/hero-lg.webp" media="(min-width: 900px)" />
+		<link rel="preload" as="image" href="images/2027/hero-sm.webp" media="(max-width: 899px)" />
+		<link rel="stylesheet" href="static/css/site.css" />
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-		<div id="wrapper">
-			<!-- Header -->
-			<header id="header">
-				<div class="logo">
-					<img
-						loading="lazy"
-						style="
-							margin-top: 4px;
-							width: 100%;
-							height: 100%;
-							object-fit: contain;
-						"
-						src="images/logo-utp.png"
-						alt="logo-utp" />
-				</div>
-				<div class="content">
-					<div style="padding-top: 0px" class="inner">
-						<img
-							loading="lazy"
-							style="
-								width: 170px;
-								padding: 10px;
-								max-width: 100%;
-								background-color: white;
-								content-visibility: auto;
-								margin-top: 20px;
-								border-radius: 30px;
-								opacity: 0.7;
-							"
-							src="images/logo-icetex.png"
-							alt="" />
-						<h1>
-							VII taller de análisis no lineal y ecuaciones
-							diferenciales parciales
-						</h1>
-						<p>28 al 31 de mayo 2025 - UTP</p>
-					</div>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="#intro">Comités</a></li>
-						<li><a href="#talks">Conferencistas</a></li>
-						<li><a href="#schedule">Cronograma</a></li>
-						<li>
-							<a style="text-wrap: nowrap" href="#mini-courses"
-								>Cursos</a
-							>
-						</li>
-						<li><a href="#hotel">Hotel</a></li>
-						<li><a href="#pereira">Pereira</a></li>
+	<body>
+		<a class="skip" href="#contenido">Saltar al contenido</a>
 
-						<li>
-							<a style="text-wrap: nowrap" href="#prev-workshops"
-								>Talleres previos</a
-							>
-						</li>
-						<li>
-							<a style="text-wrap: nowrap" href="#ponencias"
-								>Ponencias</a
-							>
-						</li>
-						<!-- <li><a href="#elements">fotos</a></li> -->
-					</ul>
+		<!-- Iconos (sprite) -->
+		<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+			<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+			<symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+			<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M3.5 10h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></symbol>
+			<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" /><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8" /></symbol>
+			<symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+			<symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3" fill="none" stroke="currentColor" stroke-width="1.8" /></symbol>
+			<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4.2-2 1.3a12 12 0 0 0 6.4 6.4l1.3-2 4.2 1.4v2.6a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+			<symbol id="i-plane" viewBox="0 0 24 24"><path d="M2.5 14.5 21 7.8a1.6 1.6 0 0 0-1.3-2.9L3.9 11.2l-1.4 3.3Zm6.2-2.3 1.8 7.3 2.6-.9-.3-8.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+			<symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5a1.5 1.5 0 1 0 0-.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+			<symbol id="i-uni" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5-9 5-9-5Zm4 2.3V16c0 1.4 2.2 3 5 3s5-1.6 5-3v-4.7M21 9v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></symbol>
+			<symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor" /></symbol>
+			<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></symbol>
+			<symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></symbol>
+		</svg>
+
+		<!-- ============ NAV ============ -->
+		<header class="nav" id="nav">
+			<div class="nav__inner">
+				<a class="nav__brand" href="#inicio" aria-label="Inicio">
+					<img src="images/2027/logo-utp.webp" alt="" width="46" height="28" />
+					<span class="nav__brand-text"><b>VIII Taller</b> Análisis No Lineal · EDP</span>
+				</a>
+				<nav class="nav__links" aria-label="Secciones">
+					<a href="#comites">Comités</a>
+					<a href="#conferencistas">Conferencistas</a>
+					<a href="#cronograma">Cronograma</a>
+					<a href="#ponencias">Ponencias</a>
+					<a href="#hotel">Hotel</a>
+					<a href="#pereira">Pereira</a>
+					<a href="#historia">Talleres previos</a>
 				</nav>
-			</header>
-
-			<!-- Main -->
-			<div id="main">
-				<!-- Intro -->
-				<article id="intro">
-					<h2 class="major">Comités</h2>
-					<span class="image main"
-						><img loading="lazy" src="images/pic01.jpg" alt=""
-					/></span>
-					<div
-						style="
-							background-color: rgba(255, 255, 255, 0.315);
-							border-radius: 10px;
-							padding: 10px;
-							display: flex;
-							justify-content: center;
-							flex-direction: column;
-							margin-bottom: 30px;
-						">
-						<div style="width: 100%; text-align: center">
-							<b><em>Organiza:</em></b>
-						</div>
-						<div
-							style="
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								flex-wrap: wrap;
-								content-visibility: auto;
-							">
-							<img
-								loading="lazy"
-								style="
-									width: 100px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-utp-color.png"
-								alt="" />
-							<img
-								loading="lazy"
-								style="
-									width: 130px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-uis.png"
-								alt="" />
-							<img
-								loading="lazy"
-								style="
-									width: 100px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-scm.png"
-								alt="" />
-							<img
-								loading="lazy"
-								style="
-									width: 100px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-icetex.png"
-								alt="" />
-							<img
-								loading="lazy"
-								style="
-									width: 100px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-udf.png"
-								alt="" />
-							<img
-								loading="lazy"
-								style="
-									width: 100px;
-									padding: 10px;
-									max-width: 100%;
-									content-visibility: auto;
-								"
-								src="images/logo-unc.png"
-								alt="" />
-						</div>
-					</div>
-
-					<p style="text-align: center">
-						<b>Comité Organizador</b> <br />
-						- Departamento de Matemáticas (Universidad Tecnológica
-						de Pereira)
-
-						<br />
-						- Doctorado en Ciencias (universidad Tecnológica de
-						Pereira)
-						<br />
-						- Juan Carlos Hernandez (universidad Nacional Sede
-						Bogotá) <br />
-						- Sigifredo Herron (Universidad Nacional de Medellin)
-						<br />
-						- Elder Villamizar (Universidad Industrial de Santander)
-						<br />
-						- Diana Sanchez (Universidad Nacional Sede Manizales)
-						<br />
-						- Arturo Sanjuan (Universidad Distrital Francisco Jose
-						de Caldas)
-					</p>
-					<p style="text-align: center">
-						<b>Comité Científico</b> <br />
-						- Alfonso Castro (Harvey Mudd College, Claremont, USA)
-						(Presidente)
-						<br />
-						- Rosa Pardo (Universidad Complutense, Madrid, España)
-						<br />
-						- Jorge Cossio (Universidad Nacional Sede Medellin)<br />
-						- Fernando Gallego (Universidad Nacional Sede
-						Manizales)<br />
-						<!-- - Bernhard Ruf (Universidad de Milan, Milan, Italia)<br /> -->
-						<!-- - Julio Rossi (Universidad de Buenos Aires, Argentina) -->
-					</p>
-				</article>
-
-				<!-- talks -->
-
-				<article id="talks">
-					<h2 class="major">Conferencistas</h2>
-					<span class="image main"
-						><img
-							loading="lazy"
-							src="images/bg-aeroupuerto.jpg"
-							alt=""
-					/></span>
-
-					<h3 class="major">Conferencistas Internacionales</h3>
-
-					<ul style="list-style-type: none; padding: 0; margin: 0">
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/alfonso.jpg"
-									alt="Alfonso Castro"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Alfonso Castro
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Estados Unidos, Harvey Mudd
-											College, Claremont</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/marcelo.jpg"
-									alt="Marcelo Martins"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										MARCELO MARTINS DOS SANTOS
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Universidade Estadual de Campinas
-											Campinas, Brasil</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/jaime.jpg"
-									alt="Jaime Navarro"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Jaime Navarro
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Universidad Autónoma Metropolitana
-											de Mexico</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/oscar.jpg"
-									alt="Oscar Agudelo"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Oscar Agudelo
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>University of west
-											Bohemia in Pilsen</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/duvan.jpg"
-									alt="Duvan Henao"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-										object-fit: cover;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Duvan Henao
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad de O'Higgins, Chile</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- <li style="border-bottom: 1px solid #ccc; padding: 20px 0">
-              <div style="display: flex; align-items: center">
-                <img loading="lazy"
-                  src="images/conferencistas/julio.jpg"
-                  alt="Julio Rossi"
-                  style="
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    margin-right: 20px;
-                  "
-                />
-                <div>
-                  <h3 style="margin: 0; font-size: 1.5em">Julio Rossi</h3>
-                  <p style="margin: 5px 0; color: #ffffff">
-                    <em>Argentina, Universidad de Buenos Aires</em>
-                  </p>
-                </div>
-              </div>
-            </li> -->
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/rosa.jpg"
-									alt="Rosa Pardo"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Rosa Pardo
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>España, Universidad Complutense ,
-											Madrid</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/matteo.jpeg"
-									alt="Matteo Rizzi"
-									style="
-										width: 120px;
-										object-fit: cover;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Matteo Rizzi
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Alemania, Universidad Giessen</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<!-- <li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img loading="lazy"
-									src="images/conferencistas/daniel.jpeg"
-									alt="Daniel Restrepo"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Daniel Restrepo
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Estados Unidos, Johns Hopkins
-											University</em
-										>
-									</p>
-								</div>
-							</div>
-						</li> -->
-
-						<!-- <li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img loading="lazy"
-									src="images/conferencistas/bernard.jpg"
-									alt="Bernhard Ruf"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Bernhard Ruf
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Italia, Universidad de Milan,
-											Milan</em
-										>
-									</p>
-								</div>
-							</div>
-						</li> -->
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/mayia.png"
-									alt="Maya Chhetr"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Maya Chhetri
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Estados Unidos, University of North
-											Carolina at Greensboro</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/pablo_amster.jpg"
-									alt="Pablo Amster"
-									style="
-										width: 120px;
-										height: 120px;
-										object-fit: cover;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Pablo Amster
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Argentina, Universidad de Buenos
-											Aires</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/ratna.jpg"
-									alt="Ratnasingham Shivaji"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Ratnasingham Shivaji
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Estados Unidos, University of North
-											Carolina, Greensboro</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-
-					<h3 style="margin-top: 3em" class="major">
-						Conferencistas Nacionales
-					</h3>
-					<ul style="list-style-type: none; padding: 0; margin: 0">
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/jorge.jpg"
-									alt="Elder"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-										object-fit: cover;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Jorge Cossio
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Medellín</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/diana.jpg"
-									alt="Elder"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Diana Sánchez
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Manizales</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/cesar.jpg"
-									alt="Elder"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Cesar Augusto Gomez Sierra
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Bogotá</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/carlos.jpg"
-									alt="Elder"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-										object-fit: cover;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Carlos Velez
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Medellín</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/elder.png"
-									alt="Elder"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Elder Villamizar
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em
-											>Universidad industrial de
-											Santander, Bucaramanga</em
-										>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/sigifredo.jpg"
-									alt="Sigifredo"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Sigifredo Herrón
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Medellín</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/emer.jpeg"
-									alt="Emer"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Emer Lopera
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Manizales</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/arturo.jpg"
-									alt="Arturo"
-									style="
-										width: 120px;
-										height: 120px;
-										object-fit: cover;
-										object-position: top;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Arturo Sanjuan
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Distrital, Bogotá</em>
-									</p>
-								</div>
-							</div>
-						</li>
-
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/fernando.jpg"
-									alt="Arturo"
-									style="
-										width: 120px;
-										height: 120px;
-										object-fit: cover;
-										object-position: top;
-										border-radius: 50%;
-										margin-right: 20px;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Fernando Gallego
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad Nacional, Manizales</em>
-									</p>
-								</div>
-							</div>
-						</li>
-						<li
-							style="
-								border-bottom: 1px solid #ccc;
-								padding: 20px 0;
-							">
-							<div style="display: flex; align-items: center">
-								<img
-									loading="lazy"
-									src="images/conferencistas/raul.jpg"
-									alt="Raul Quintero"
-									style="
-										width: 120px;
-										height: 120px;
-										border-radius: 50%;
-										margin-right: 20px;
-										object-fit: cover;
-									" />
-								<div>
-									<h3 style="margin: 0; font-size: 1.5em">
-										Raul Quintero
-									</h3>
-									<p style="margin: 5px 0; color: #ffffff">
-										<em>Universidad del Valle, Cali</em>
-									</p>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</article>
-
-				<!-- schedule -->
-				<article id="schedule">
-					<h2 class="major">Cronograma</h2>
-					<style>
-						.image-gallery {
-							display: flex;
-							gap: 1rem;
-							justify-content: center;
-							flex-wrap: wrap;
-							margin-bottom: 2rem;
-						}
-
-						.image-gallery-item {
-							max-width: 48%;
-							text-align: center;
-						}
-
-						.image-gallery-item img {
-							width: 100%;
-							border-radius: 8px;
-						}
-
-						.image-gallery-item p {
-							color: white;
-							margin-top: 0.5rem;
-						}
-
-						@media (max-width: 768px) {
-							.image-gallery-item {
-								max-width: 100% !important;
-							}
-						}
-					</style>
-
-					<div class="image-gallery">
-						<div class="image-gallery-item">
-							<img
-								src="images/auditorio1.jpg"
-								alt="Auditorio 1"
-								loading="lazy" />
-							<p>Sala Magistral 2</p>
-						</div>
-
-						<div class="image-gallery-item">
-							<img
-								src="images/auditorio2.jpg"
-								alt="Auditorio 2"
-								loading="lazy" />
-							<p>Teatro Bellas Artes</p>
-						</div>
-					</div>
-
-					<em
-						><p>
-							Libro de resúmenes:
-							<a href="/Abstracts.pdf" target="_blank">
-								clic aquí</a
-							>
-						</p></em
-					>
-
-					<style>
-						.schedule-day {
-							margin-top: 3rem;
-						}
-
-						.schedule-day h3 {
-							font-size: 1.3rem;
-							color: #ffffff;
-							border-left: 4px solid #0af;
-							padding-left: 12px;
-							margin-bottom: 1.5rem;
-							text-transform: uppercase;
-							letter-spacing: 1px;
-						}
-
-						.schedule-card {
-							background: rgba(255, 255, 255, 0.05);
-							border: 1px solid rgba(255, 255, 255, 0.1);
-							border-radius: 10px;
-							padding: 1rem 1.2rem;
-							margin-bottom: 1rem;
-							transition: background 0.3s ease;
-						}
-
-						.schedule-card:hover {
-							background: rgba(255, 255, 255, 0.08);
-						}
-
-						.schedule-time {
-							font-weight: bold;
-							font-size: 0.9rem;
-							color: #0af;
-							margin-bottom: 0.3rem;
-						}
-
-						.schedule-title {
-							color: #ffffff;
-							font-size: 1.05rem;
-							font-weight: 600;
-						}
-
-						.schedule-speaker {
-							color: #aaaaaa;
-							font-size: 0.9rem;
-							margin-top: 0.2rem;
-						}
-					</style>
-
-					<!-- Miércoles 28 de Mayo de 2025 -->
-					<div class="schedule-day">
-						<h3>Miércoles 28 de Mayo de 2025</h3>
-
-						<div class="schedule-card">
-							<div class="schedule-time">8:30–9:00</div>
-							<div class="schedule-title">Inauguración</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">9:00–10:00</div>
-							<div class="schedule-title">
-								Contributions of Professor José Francisco
-								Caicedo to Nonlinear Analysis
-							</div>
-							<div class="schedule-speaker">
-								Alfonso Castro – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:30–11:30</div>
-							<div class="schedule-title">
-								Nonlinear Eigenvalue Problems with Nonlinear
-								Boundary Condition
-							</div>
-							<div class="schedule-speaker">
-								Maya Chhetri – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">11:30–12:00</div>
-							<div class="schedule-title">
-								Waves in Fluids: Generation and Propagation
-							</div>
-							<div class="schedule-speaker">
-								David Andrade – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">2:30–3:00</div>
-							<div class="schedule-title">
-								Exponential Decay Rate of Energy for the BBM-KP
-								Model Under Localized Damping in R2
-							</div>
-							<div class="schedule-speaker">
-								Fernando Gallego – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Última charla movida a las 3:00–3:30 -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">
-								About Some Generalized Nonlocal Diffusion Models
-							</div>
-							<div class="schedule-speaker">
-								César Gómez – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Resto corrido -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:30–4:00</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">4:00–5:00</div>
-							<div class="schedule-title">
-								A Jacobi-Toda System on Cone Like Surfaces
-							</div>
-							<div class="schedule-speaker">
-								Oscar Agudelo – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:00–5:30</div>
-							<div class="schedule-title">
-								Applications of a Sub-Super Solution Theorem to
-								Elliptic Problems
-							</div>
-							<div class="schedule-speaker">
-								Diana Sánchez – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:30–6:00</div>
-							<div class="schedule-title">
-								Acto Cultural: Danzas Trietnias – Sala Magistral
-								2 Bloque 13
-							</div>
-						</div>
-					</div>
-
-					<!-- Jueves 29 de Mayo de 2025 -->
-					<div class="schedule-day">
-						<h3>Jueves 29 de Mayo de 2025</h3>
-
-						<div class="schedule-card">
-							<div class="schedule-time">8:30–9:00</div>
-							<div class="schedule-title">
-								Qualitative Analysis for a Pearl Model
-							</div>
-							<div class="schedule-speaker">
-								Alexander Gutierrez – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">9:00–10:00</div>
-							<div class="schedule-title">
-								On the Navier-Stokes equations for stationary
-								incompressible fluids with a discontinuous
-								density and the Ladyzhenskaya-Solonnikov problem
-								for the power mode
-							</div>
-							<div class="schedule-speaker">
-								Marcelo dos Santos – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:30–11:30</div>
-							<div class="schedule-title">
-								On the Existence of Solitary Wave Solutions for
-								a Fifth-Order Kaup-Kupershmidt-KdV Type Equation
-							</div>
-							<div class="schedule-speaker">
-								Raúl Quintero – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">11:30–12:00</div>
-							<div class="schedule-title">
-								Existence and Nonexistence of Positive Solutions
-								for a Class of Quasilinear Problems
-							</div>
-							<div class="schedule-speaker">
-								Emer Lopera – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">2:30–3:00</div>
-							<div class="schedule-title">
-								On the Existence, Regularity and Control Theory
-								of Some Chemotaxis Model
-							</div>
-							<div class="schedule-speaker">
-								Élder Villamizar – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Última charla movida a las 3:00–3:30 -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">
-								The Laplacian Operator and Generalizations
-							</div>
-							<div class="schedule-speaker">
-								Sigifredo Herrón – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Resto corrido -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:30–4:00</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">4:00–5:00</div>
-							<div class="schedule-title">
-								A relaxation approach to the minimisation of the
-								neo-Hookean energy in 3D
-							</div>
-							<div class="schedule-speaker">
-								Duván Henao – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:00–5:30</div>
-							<div class="schedule-title">
-								Some Aspects of Positive Solutions for
-								Hamiltonian Elliptic Systems with Concave-Convex
-								Nonlinearities
-							</div>
-							<div class="schedule-speaker">
-								Carlos Vélez – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:30–6:00</div>
-							<div class="schedule-title">
-								Existence of Weak Solutions for the Burgers
-								Equation with Time-Dependent Coefficient
-							</div>
-							<div class="schedule-speaker">
-								Oscar Rojas – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">6:30–7:00</div>
-							<div class="schedule-title">
-								Concierto Sinfónica – Teatro Bellas Artes
-							</div>
-						</div>
-					</div>
-
-					<!-- Viernes 30 de Mayo de 2025 -->
-					<div class="schedule-day">
-						<h3>Viernes 30 de Mayo de 2025</h3>
-
-						<div class="schedule-card">
-							<div class="schedule-time">8:30–9:00</div>
-							<div class="schedule-title">
-								Riemann Problems for Hyperbolic Systems of
-								Conservation Laws with a Time-Dependent
-								Coulomb-Like Friction Term
-							</div>
-							<div class="schedule-speaker">
-								Richard De la Cruz – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">9:00–10:00</div>
-							<div class="schedule-title">
-								Characterization of Triebel-Lizorkin Spaces via
-								the Continuous Wavelet Transform
-							</div>
-							<div class="schedule-speaker">
-								Jaime Navarro – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:00–10:30</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:30–11:30</div>
-							<div class="schedule-title">
-								Uniqueness of positive solutions for a class of
-								nonlinear elliptic equations with Robin boundary
-								conditions.
-							</div>
-							<div class="schedule-speaker">
-								Ratnasingham Shivaji – Sala Magistral 2 Bloque
-								13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">11:30–12:00</div>
-							<div class="schedule-title">
-								A Review on the Range of the Semilinear Wave
-								Equation with Non-Monotone Nonlinearity
-							</div>
-							<div class="schedule-speaker">
-								Arturo Sanjuán – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">2:30–3:00</div>
-							<div class="schedule-title">
-								Existence of Multiple Solutions for a
-								Quasilinear Elliptic Problem
-							</div>
-							<div class="schedule-speaker">
-								Jorge Cossio – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Última charla movida a las 3:00–3:30 -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:00–3:30</div>
-							<div class="schedule-title">
-								Lusternik-Schnirelman and Morse Theory for the
-								Van der Waals–Cahn–Hilliard Equation with Volume
-								Constraint
-							</div>
-							<div class="schedule-speaker">
-								Luis Osorio – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<!-- Resto corrido -->
-						<div class="schedule-card">
-							<div class="schedule-time">3:30–4:00</div>
-							<div class="schedule-title">Café</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">4:00–5:00</div>
-							<div class="schedule-title">
-								Positive Solutions for Slightly Subcritical
-								Quasilinear Problems
-							</div>
-							<div class="schedule-speaker">
-								Rosa Pardo – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:00–5:30</div>
-							<div class="schedule-title">
-								Gradient Systems of Polynomial Solutions to the
-								Laplace Equation
-							</div>
-							<div class="schedule-speaker">
-								Oscar Ramírez – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">5:30–6:00</div>
-							<div class="schedule-title">
-								An Example on the Quadrature Method
-							</div>
-							<div class="schedule-speaker">
-								Diego Castro – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-					</div>
-
-					<!-- Sábado 31 de Mayo de 2025 -->
-					<div class="schedule-day">
-						<h3>Sábado 31 de Mayo de 2025</h3>
-
-						<div class="schedule-card">
-							<div class="schedule-time">8:30–9:00</div>
-							<div class="schedule-title">
-								Mathematical Model and Real-Time Sensor for the
-								Dynamics of Dissolved Oxygen and Temperature in
-								Closed Fish Transport Systems
-							</div>
-							<div class="schedule-speaker">
-								Yineth Arce – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">9:00–09:30</div>
-							<div class="schedule-title">
-								Existence of Weak Solution for the Cauchy
-								Problem Associated with the ARG
-								Traffic Flow Model
-							</div>
-							<div class="schedule-speaker">
-								Juan Carlos Hernández – Sala Magistral 2 Bloque
-								13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">9:30–10:00</div>
-							<div class="schedule-title">
-								The Cahn-Hillard equation and CMC Surfaces
-							</div>
-							<div class="schedule-speaker">
-								Mateo Rizzi – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-
-						<div class="schedule-card">
-							<div class="schedule-time">10:00–11:00</div>
-							<div class="schedule-title">
-								A Metapopulation Model with Almost Periodic
-								Colonization and Extinction Rates
-							</div>
-							<div class="schedule-speaker">
-								Pablo Amster – Sala Magistral 2 Bloque 13
-							</div>
-						</div>
-					</div>
-				</article>
-
-				<!-- Contact -->
-				<article id="mini-courses">
-					<h2 class="major">Cursos</h2>
-					<span class="image main"
-						><img
-							loading="lazy"
-							src="images/bg-estadio.webp"
-							alt=""
-					/></span>
-					<em>En construcción...</em>
-				</article>
-
-				<article id="hotel">
-					<h2 class="major">Hotel</h2>
-					<span class="image main">
-						<img
-							loading="lazy"
-							style="
-								aspect-ratio: 16/9;
-								object-fit: cover;
-								content-visibility: auto;
-							"
-							src="images/hotel1.png"
-							alt="" />
-					</span>
-
-					<!-- Sección del hotel donde se alojarán los asistentes -->
-					<section style="margin-bottom: 2rem" id="hotel">
-						<h3 style="margin-bottom: 0px">
-							Hotel Alamos del Parque
-						</h3>
-						<a
-							href="https://maps.app.goo.gl/wLBFpY5NvTFXaeAPA"
-							target="_blank">
-							<em>Ver Ubicación</em>
-						</a>
-					</section>
-					<!-- Fin sección hotel -->
-
-					<!-- Sección de tarifas y servicios -->
-					<section style="margin-top: 2rem" id="tarifas">
-						<h3>Tarifas Corporativas</h3>
-
-						<ul>
-							<li>
-								Habitación Superior Estándar 1 persona: $
-								188.000 + IVA $ 223.720
-							</li>
-							<li>
-								Habitación cama doble matrimonio 2 personas: $
-								218.000 + IVA $259.420
-							</li>
-							<li>
-								Habitación dos camas semidobles 2 personas: $
-								218.000 + IVA $259.420
-							</li>
-							<li>
-								Habitación con balcón: $ 235.000 + IVA $ 279.650
-							</li>
-							<li>
-								Habitación suite familiar: $387.000 + IVA $
-								460.530
-							</li>
-						</ul>
-						<p>
-							<strong>Incluye:</strong> Seguro Hotelero y
-							Desayuno.
-						</p>
-
-						<h4>Alimentación</h4>
-						<p>
-							Estas tarifas se mantendrán durante todo el año
-							2025. La opción de desayunos se mantiene con los
-							mismos horarios de 7 am a 10 am y requerimientos
-							especiales de desayuno para llevar, si es antes de
-							las 7 am.
-						</p>
-						<p>
-							Si la persona requiere almuerzo o cena se puede
-							armar un paquete completo dado que el Hotel cuenta
-							con servicio prestado por Pintadito Café –
-							Restaurante.
-						</p>
-
-						<h4>Formas de Pago</h4>
-						<p>Pago al momento del Check-In.</p>
-
-						<p>
-							<strong>Dirección:</strong> Calle 13 #24-139 Barrio
-							Los Álamos<br />
-							<strong>Teléfono:</strong> (6)326 42 37<br />
-							<strong>Celular:</strong> 3046593798<br />
-							<strong>Email:</strong>
-							<a href="mailto:reservas@hotelalamosdelparque.com"
-								>reservas@hotelalamosdelparque.com</a
-							>
-						</p>
-					</section>
-
-					<div style="display: flex; flex-wrap: wrap; gap: 20px">
-						<!-- Imagen 1: Fachada del hotel -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/bg-hotel.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Fachada del hotel" />
-							</span>
-							<p style="margin-bottom: 0.5rem">Fachada</p>
-						</div>
-
-						<!-- Imagen 3: Lobby -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/hotel3.png"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Lobby del hotel" />
-							</span>
-							<p style="margin-bottom: 0.5rem">Lobby principal</p>
-						</div>
-						<!-- Imagen 4: Lobby -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/hotel4.png"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Lobby del hotel" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Otro ángulo del lobby
-							</p>
-						</div>
-
-						<!-- Imagen 2: Habitación -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/superior.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Habitación con vista" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Habitación Superior Standard
-							</p>
-						</div>
-
-						<!-- Imagen 2: Habitación -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/semidobles.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Habitación con vista" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Habitación Camas Semi Dobles
-							</p>
-						</div>
-
-						<!-- Imagen 2: Habitación -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/balcon.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Habitación con vista" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Habitación con Balcón
-							</p>
-						</div>
-
-						<!-- Imagen 2: Habitación -->
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/familiar.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Habitación con vista" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Habitación Suite Familiar
-							</p>
-						</div>
-
-						<div style="flex: 1 1 45%">
-							<span
-								style="margin-bottom: 1rem; margin-top: 2rem"
-								class="image main">
-								<img
-									loading="lazy"
-									src="images/sencilla.jpg"
-									style="
-										aspect-ratio: 16/9;
-										object-fit: cover;
-										content-visibility: auto;
-									"
-									alt="Habitación con vista" />
-							</span>
-							<p style="margin-bottom: 0.5rem">
-								Habitación sencila
-							</p>
-						</div>
-					</div>
-				</article>
-
-				<!-- pereira -->
-				<article id="pereira">
-					<h2 class="major">Pereira</h2>
-
-					<!-- Se mantiene la imagen principal o cualquier otro contenido original -->
-					<span class="image main">
-						<img loading="lazy" src="images/pic03.jpg" alt="" />
-					</span>
-
-					<p>
-						<a
-							target="_blank"
-							href="file:///C:/Users/User/AppData/Local/Microsoft/Windows/INetCache/IE/07JPQB5H/WEB-Mapa-Turismo-PEREIRA[1].pdf"
-							>- Sitios Turisticos</a
-						>
-						<br />
-						<a
-							target="_blank"
-							href="https://cotelcorisaralda.org/afiliados/"
-							>- Hoteles</a
-						>
-						<br />
-						<a target="_blank" href="https://aeromate.gov.co/">
-							- Aeropuerto
-						</a>
-						<br />
-						<a target="_blank" href="https://utp.edu.co/">
-							- Departamento de Matemáticas
-						</a>
-					</p>
-
-					<iframe
-						width="100%"
-						height="400"
-						src="https://www.youtube.com/embed/LH5Dhiwt3K0?si=urdGrkJH7YRPoXYE"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
-						allowfullscreen>
-					</iframe>
-				</article>
-
-				<!-- ponencias -->
-				<article id="ponencias">
-					<h2 class="major">abstract</h2>
-
-					<!-- Se mantiene la imagen principal o cualquier otro contenido original -->
-					<span class="image main">
-						<img loading="lazy" src="images/pic03.jpg" alt="" />
-					</span>
-
-					Recepción de Trabajos <br />
-
-					Invitamos a la comunidad matemática a postular la
-					presentación de resultados de investigación
-					<br />
-					<br />
-					• Resúmenes (máximo dos páginas).
-					<br />
-					• Las postulaciones serán consideradas para presentaciones,
-					como ponencia o posters.
-					<br />
-					<br />
-					Se deberán enviar las propuestas en formato PDF, al correo
-					<a href="mailto:caramirez@utp.edu.co"
-						>caramirez@utp.edu.co</a
-					>
-					Fecha límite para el envío de trabajos: 6 de abril de 2025
-				</article>
-
-				<!-- contacts -->
-				<article id="contacts">
-					<h2 class="major">Cont ctos</h2>
-					<span class="image main"
-						><img loading="lazy" src="images/pic03.jpg" alt=""
-					/></span>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur et adipiscing
-						elit. Praesent eleifend dignissim arcu, at eleifend
-						sapien imperdiet ac. Aliquam erat volutpat. Praesent
-						urna nisi, fringila lorem et vehicula lacinia quam.
-						Integer sollicitudin mauris nec lorem luctus ultrices.
-						Aliquam libero et malesuada fames ac ante ipsum primis
-						in faucibus. Cras viverra ligula sit amet ex mollis
-						mattis lorem ipsum dolor sit amet.
-					</p>
-				</article>
-
-				<!-- prev-workshops -->
-				<article id="prev-workshops">
-					<h2 class="major">Talleres Previos</h2>
-					<span class="image main"
-						><img loading="lazy" src="images/bg-utp.jpg" alt=""
-					/></span>
-					<p>
-						Fundados por los profesores José Francisco Caicedo y
-						Alfonso Castro, Desde 2010, el Taller de Análisis No
-						Lineal y Ecuaciones Diferenciales Parciales se ha
-						llevado a cabo en Colombia con los esfuerzos conjuntos
-						de la Universidad Nacional, la Universidad Sergio
-						Arboleda y la Universidad Distrital.
-					</p>
-					<p>
-						El taller ha contado con la participación de numerosos
-						investigadores importantes en el campo del análisis no
-						lineal y las ecuaciones diferenciales parciales, como
-						Peter Bates, Monica Clapp, Bernhard Ruff, Ratnasingham
-						Shivaji, Marcelo dos Santos, Filomena Pacella, Julio
-						Rossi, Pablo Amster, Jaime Navarro y Rosa Pardo, entre
-						otros.
-					</p>
-					<p>Estas son las ediciones previas del taller:</p>
-					<ul>
-						<li>
-							<a
-								target="_blank"
-								href="https://www.google.com/url?q=https%3A%2F%2Fwww.math.hmc.edu%2F~castro%2FTallerBogota.html&sa=D&sntz=1&usg=AOvVaw1q1oLnCEqJ1UU9wQeUlyJK"
-								>I Taller en la Universidad Nacional de Colombia
-								- Bogotá, 2010</a
-							>
-						</li>
-						<li>
-							<a target="_blank"
-								>II Taller en la Universidad Nacional de
-								Colombia - Bogotá, 2012</a
-							>
-						</li>
-						<li>
-							<a
-								target="_blank"
-								href="https://www.google.com/url?q=https%3A%2F%2Fsites.google.com%2Funal.edu.co%2Fiii-taller-analisis-no-lineal&sa=D&sntz=1&usg=AOvVaw2YO4KmPtKEa7mdWUjQ6rd4"
-								>III Taller en la Universidad Sergio Arboleda -
-								Bogotá, 2015</a
-							>
-						</li>
-						<li>
-							<a
-								target="_blank"
-								href="http://www.google.com/url?q=http%3A%2F%2Finvestigacion.unal.edu.co%2Fboletin%2Fnotas-boletin-un-investiga%2Fnews%2Fiv-taller-internacional-de-analisis-no-lineal-y-ecuaciones-diferenciales-parciales%2F&sa=D&sntz=1&usg=AOvVaw1yxnrVC3KBHYAh_izbnAm9"
-								>IV Taller en la Universidad Nacional de
-								Colombia - Manizales, 2017</a
-							>
-						</li>
-
-						<li>
-							<a
-								target="_blank"
-								href="https://sites.google.com/unal.edu.co/vtaller/home?pli=1">
-								V Taller en la Universidad Nacional de
-								Cololombia - Bogota, 2019</a
-							>
-						</li>
-						<li>
-							<a
-								target="_blank"
-								href="https://sites.google.com/unal.edu.co/talleranalisisnolineal2023/home"
-								>VI Workshop held in Universidad Nacional de
-								Colombia - Manizales, 2023</a
-							>
-						</li>
-					</ul>
-				</article>
-
-				<!-- photos -->
-				<article id="photos">
-					<h2 class="major">Fotos</h2>
-					<span class="image main"
-						><img loading="lazy" src="images/pic03.jpg" alt=""
-					/></span>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur et adipiscing
-						elit. Praesent eleifend dignissim arcu, at eleifend
-						sapien imperdiet ac. Aliquam erat volutpat. Praesent
-						urna nisi, fringila lorem et vehicula lacinia quam.
-						Integer sollicitudin mauris nec lorem luctus ultrices.
-						Aliquam libero et malesuada fames ac ante ipsum primis
-						in faucibus. Cras viverra ligula sit amet ex mollis
-						mattis lorem ipsum dolor sit amet.
-					</p>
-				</article>
-
-				<!-- Elements -->
-				<article id="elements">
-					<h2 class="major">Elements</h2>
-
-					<section>
-						<h3 class="major">Text</h3>
-						<p>
-							This is <b>bold</b> and this is
-							<strong>strong</strong>. This is <i>italic</i> and
-							this is <em>emphasized</em>. This is
-							<sup>superscript</sup> text and this is
-							<sub>subscript</sub> text. This is
-							<u>underlined</u> and this is code:
-							<code>for (;;) { ... }</code>. Finally,
-							<a href="#">this is a link</a>.
-						</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h4>Blockquote</h4>
-						<blockquote>
-							Fringilla nisl. Donec accumsan interdum nisi, quis
-							tincidunt felis sagittis eget tempus euismod.
-							Vestibulum ante ipsum primis in faucibus vestibulum.
-							Blandit adipiscing eu felis iaculis volutpat ac
-							adipiscing accumsan faucibus. Vestibulum ante ipsum
-							primis in faucibus lorem ipsum dolor sit amet nullam
-							adipiscing eu felis.
-						</blockquote>
-						<h4>Preformatted</h4>
-						<pre><code>i = 0;
-
-              while (!deck.isInOrder()) {
-                  print 'Iteration ' + i;
-                  deck.shuffle();
-                  i++;
-              }
-
-              print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
-
-					<section>
-						<h3 class="major">Lists</h3>
-
-						<h4>Unordered</h4>
-						<ul>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Sagittis adipiscing.</li>
-							<li>Felis enim feugiat.</li>
-						</ul>
-
-						<h4>Alternate</h4>
-						<ul class="alt">
-							<li>Dolor pulvinar etiam.</li>
-							<li>Sagittis adipiscing.</li>
-							<li>Felis enim feugiat.</li>
-						</ul>
-
-						<h4>Ordered</h4>
-						<ol>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis viverra.</li>
-							<li>Felis enim feugiat.</li>
-							<li>Dolor pulvinar etiam.</li>
-							<li>Etiam vel felis lorem.</li>
-							<li>Felis enim et feugiat.</li>
-						</ol>
-						<h4>Icons</h4>
-						<ul class="icons">
-							<li>
-								<a href="#" class="icon brands fa-twitter"
-									><span class="label">Twitter</span></a
-								>
-							</li>
-							<li>
-								<a href="#" class="icon brands fa-facebook-f"
-									><span class="label">Facebook</span></a
-								>
-							</li>
-							<li>
-								<a href="#" class="icon brands fa-instagram"
-									><span class="label">Instagram</span></a
-								>
-							</li>
-							<li>
-								<a href="#" class="icon brands fa-github"
-									><span class="label">Github</span></a
-								>
-							</li>
-						</ul>
-
-						<h4>Actions</h4>
-						<ul class="actions">
-							<li>
-								<a href="#" class="button primary">Default</a>
-							</li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions stacked">
-							<li>
-								<a href="#" class="button primary">Default</a>
-							</li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-					</section>
-
-					<section>
-						<h3 class="major">Table</h3>
-						<h4>Default</h4>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>
-											Ante turpis integer aliquet
-											porttitor.
-										</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>
-											Vis ac commodo adipiscing arcu
-											aliquet.
-										</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td>
-											Morbi faucibus arcu accumsan lorem.
-										</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>
-											Vitae integer tempus condimentum.
-										</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>
-											Ante turpis integer aliquet
-											porttitor.
-										</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h4>Alternate</h4>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>
-											Ante turpis integer aliquet
-											porttitor.
-										</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>
-											Vis ac commodo adipiscing arcu
-											aliquet.
-										</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td>
-											Morbi faucibus arcu accumsan lorem.
-										</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>
-											Vitae integer tempus condimentum.
-										</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>
-											Ante turpis integer aliquet
-											porttitor.
-										</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h3 class="major">Buttons</h3>
-						<ul class="actions">
-							<li>
-								<a href="#" class="button primary">Primary</a>
-							</li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li>
-								<a
-									href="#"
-									class="button primary icon solid fa-download"
-									>Icon</a
-								>
-							</li>
-							<li>
-								<a
-									href="#"
-									class="button icon solid fa-download"
-									>Icon</a
-								>
-							</li>
-						</ul>
-						<ul class="actions">
-							<li>
-								<span class="button primary disabled"
-									>Disabled</span
-								>
-							</li>
-							<li>
-								<span class="button disabled">Disabled</span>
-							</li>
-						</ul>
-					</section>
-
-					<section>
-						<h3 class="major">Form</h3>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field half">
-									<label for="demo-name">Name</label>
-									<input
-										type="text"
-										name="demo-name"
-										id="demo-name"
-										value=""
-										placeholder="Jane Doe" />
-								</div>
-								<div class="field half">
-									<label for="demo-email">Email</label>
-									<input
-										type="email"
-										name="demo-email"
-										id="demo-email"
-										value=""
-										placeholder="jane@untitled.tld" />
-								</div>
-								<div class="field">
-									<label for="demo-category">Category</label>
-									<select
-										name="demo-category"
-										id="demo-category">
-										<option value="">-</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">
-											Administration
-										</option>
-										<option value="1">
-											Human Resources
-										</option>
-									</select>
-								</div>
-								<div class="field half">
-									<input
-										type="radio"
-										id="demo-priority-low"
-										name="demo-priority"
-										checked />
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="field half">
-									<input
-										type="radio"
-										id="demo-priority-high"
-										name="demo-priority" />
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="field half">
-									<input
-										type="checkbox"
-										id="demo-copy"
-										name="demo-copy" />
-									<label for="demo-copy"
-										>Email me a copy</label
-									>
-								</div>
-								<div class="field half">
-									<input
-										type="checkbox"
-										id="demo-human"
-										name="demo-human"
-										checked />
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="field">
-									<label for="demo-message">Message</label>
-									<textarea
-										name="demo-message"
-										id="demo-message"
-										placeholder="Enter your message"
-										rows="6"></textarea>
-								</div>
-							</div>
-							<ul class="actions">
-								<li>
-									<input
-										type="submit"
-										value="Send Message"
-										class="primary" />
-								</li>
-								<li><input type="reset" value="Reset" /></li>
-							</ul>
-						</form>
-					</section>
-				</article>
+				<a class="btn btn--sm btn--accent nav__cta" href="#ponencias">Enviar resumen</a>
+				<button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
+					<span></span><span></span>
+				</button>
+			</div>
+			<div class="mobile-menu" id="mobileMenu" hidden>
+				<nav aria-label="Secciones (móvil)">
+					<a href="#comites"><span>01</span>Comités</a>
+					<a href="#conferencistas"><span>02</span>Conferencistas</a>
+					<a href="#cronograma"><span>03</span>Cronograma</a>
+					<a href="#ponencias"><span>04</span>Ponencias</a>
+					<a href="#hotel"><span>05</span>Hotel</a>
+					<a href="#pereira"><span>06</span>Pereira</a>
+					<a href="#historia"><span>07</span>Talleres previos</a>
+				</nav>
+				<a class="btn btn--accent" href="#ponencias">Enviar resumen <svg><use href="#i-arrow" /></svg></a>
+			</div>
+		</header>
+
+		<!-- ============ HERO ============ -->
+		<section class="hero" id="inicio">
+			<picture class="hero__bg">
+				<source media="(min-width: 900px)" srcset="images/2027/hero-lg.webp" type="image/webp" />
+				<source srcset="images/2027/hero-sm.webp" type="image/webp" />
+				<img src="images/2027/hero-lg.jpg" alt="" />
+			</picture>
+			<div class="hero__shade"></div>
+			<canvas class="hero__flow" id="flow" aria-hidden="true"></canvas>
+
+			<div class="hero__content">
+				<div class="hero__seal">
+					<img src="images/2027/logo-utp.webp" alt="Universidad Tecnológica de Pereira" width="92" height="55" />
+				</div>
+				<span class="hero__line" aria-hidden="true"></span>
+
+				<div class="hero__frame">
+					<p class="hero__eyebrow">VIII Taller Internacional</p>
+					<h1 class="hero__title">
+						Análisis No Lineal <br /><em>y Ecuaciones Diferenciales Parciales</em>
+					</h1>
+				</div>
+
+				<ul class="hero__meta">
+					<li><svg><use href="#i-cal" /></svg>2 – 5 de junio, 2027</li>
+					<li><svg><use href="#i-pin" /></svg>Pereira, Colombia</li>
+					<li><svg><use href="#i-uni" /></svg>Universidad Tecnológica de Pereira</li>
+				</ul>
+
+				<div class="hero__actions">
+					<a class="btn btn--accent btn--lg" href="#cronograma">Ver cronograma <svg><use href="#i-arrow" /></svg></a>
+					<a class="btn btn--ghost btn--lg" href="#ponencias">Convocatoria de ponencias</a>
+				</div>
+
+				<div class="countdown" id="countdown" data-target="2027-06-02T08:30:00-05:00" aria-label="Cuenta regresiva para la inauguración">
+					<div><b data-unit="d">—</b><span>días</span></div>
+					<div><b data-unit="h">—</b><span>horas</span></div>
+					<div><b data-unit="m">—</b><span>min</span></div>
+					<div><b data-unit="s">—</b><span>seg</span></div>
+				</div>
 			</div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<p class="copyright">VII taller de análisis no lineal.</p>
-			</footer>
-		</div>
+			<p class="hero__credit">Participantes del VII Taller · Pereira, 2025</p>
+			<a class="hero__scroll" href="#contenido" aria-label="Bajar al contenido"><span></span></a>
+		</section>
 
-		<!-- BG -->
-		<div id="bg"></div>
+		<div class="stripe" aria-hidden="true"></div>
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+		<main id="contenido">
+			<!-- ============ DATOS CLAVE ============ -->
+			<section class="facts container" aria-label="Datos clave">
+				<div class="fact">
+					<span class="fact__k">Fechas</span>
+					<span class="fact__v">2 – 5 jun 2027</span>
+					<span class="fact__s">Miércoles a sábado</span>
+				</div>
+				<div class="fact">
+					<span class="fact__k">Sede</span>
+					<span class="fact__v">UTP, Pereira</span>
+					<span class="fact__s">Eje Cafetero, Colombia</span>
+				</div>
+				<div class="fact fact--hl">
+					<span class="fact__k">Envío de resúmenes</span>
+					<span class="fact__v">22 mar 2027</span>
+					<span class="fact__s" id="deadlineShort">Fecha límite</span>
+				</div>
+				<div class="fact">
+					<span class="fact__k">Modalidades</span>
+					<span class="fact__v">Ponencia · Póster</span>
+					<span class="fact__s">Resumen máx. 2 páginas</span>
+				</div>
+			</section>
+
+			<!-- ============ COMITÉS ============ -->
+			<section class="section" id="comites">
+				<div class="container">
+					<header class="sec-head reveal">
+						<p class="sec-head__num">01 — Comités</p>
+						<h2>Quienes hacen posible el taller</h2>
+						<p class="sec-head__lede">
+							Una iniciativa conjunta de universidades colombianas y de la comunidad matemática
+							internacional dedicada al análisis no lineal y las EDP.
+						</p>
+					</header>
+
+					<div class="orgs reveal">
+						<p class="orgs__label">Organizan y apoyan</p>
+						<ul class="orgs__grid">
+							<li><img src="images/2027/logo-utp-color.webp" alt="Universidad Tecnológica de Pereira" loading="lazy" /></li>
+							<li><img src="images/2027/logo-uis.webp" alt="Universidad Industrial de Santander" loading="lazy" /></li>
+							<li><img src="images/2027/logo-scm.webp" alt="Sociedad Colombiana de Matemáticas" loading="lazy" /></li>
+							<li><img src="images/2027/logo-icetex.webp" alt="ICETEX" loading="lazy" /></li>
+							<li><img src="images/2027/logo-udf.webp" alt="Universidad Distrital Francisco José de Caldas" loading="lazy" /></li>
+							<li><img src="images/2027/logo-unc.webp" alt="Universidad Nacional de Colombia" loading="lazy" /></li>
+						</ul>
+					</div>
+
+					<div class="committees">
+						<article class="committee reveal">
+							<h3>Comité organizador</h3>
+							<ul class="people">
+								<li><b>Departamento de Matemáticas</b><span>Universidad Tecnológica de Pereira</span></li>
+								<li><b>Doctorado en Ciencias</b><span>Universidad Tecnológica de Pereira</span></li>
+								<li><b>Juan Carlos Hernández</b><span>Universidad Nacional, sede Bogotá</span></li>
+								<li><b>Sigifredo Herrón</b><span>Universidad Nacional, sede Medellín</span></li>
+								<li><b>Elder Villamizar</b><span>Universidad Industrial de Santander</span></li>
+								<li><b>Diana Sánchez</b><span>Universidad Nacional, sede Manizales</span></li>
+								<li><b>Arturo Sanjuán</b><span>Universidad Distrital Francisco José de Caldas</span></li>
+							</ul>
+						</article>
+						<article class="committee reveal">
+							<h3>Comité científico</h3>
+							<ul class="people">
+								<li><b>Alfonso Castro <i class="tag">Presidente</i></b><span>Harvey Mudd College, Claremont, EE. UU.</span></li>
+								<li><b>Rosa Pardo</b><span>Universidad Complutense de Madrid, España</span></li>
+								<li><b>Jorge Cossio</b><span>Universidad Nacional, sede Medellín</span></li>
+								<li><b>Fernando Gallego</b><span>Universidad Nacional, sede Manizales</span></li>
+							</ul>
+							<blockquote class="committee__quote">
+								Fundado por los profesores José Francisco Caicedo y Alfonso Castro, el taller se
+								realiza en Colombia desde 2010.
+							</blockquote>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ CONFERENCISTAS ============ -->
+			<section class="section section--alt" id="conferencistas">
+				<div class="container">
+					<header class="sec-head sec-head--split reveal">
+						<div>
+							<p class="sec-head__num">02 — Conferencistas</p>
+							<h2>Conferencistas invitados</h2>
+						</div>
+						<div class="seg" role="group" aria-label="Filtrar conferencistas">
+							<button class="seg__btn is-active" data-filter="all" aria-pressed="true">Todos <span>20</span></button>
+							<button class="seg__btn" data-filter="int" aria-pressed="false">Internacionales <span>10</span></button>
+							<button class="seg__btn" data-filter="nac" aria-pressed="false">Nacionales <span>10</span></button>
+						</div>
+					</header>
+
+					<ul class="speakers" id="speakers">
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/alfonso.webp" alt="" loading="lazy" /><div><h3>Alfonso Castro</h3><p>Harvey Mudd College, Claremont</p><span class="chip">Estados Unidos</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/marcelo.webp" alt="" loading="lazy" /><div><h3>Marcelo Martins dos Santos</h3><p>Universidade Estadual de Campinas</p><span class="chip">Brasil</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/jaime.webp" alt="" loading="lazy" /><div><h3>Jaime Navarro</h3><p>Universidad Autónoma Metropolitana</p><span class="chip">México</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/oscar.webp" alt="" loading="lazy" /><div><h3>Oscar Agudelo</h3><p>University of West Bohemia, Pilsen</p><span class="chip">Rep. Checa</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/duvan.webp" alt="" loading="lazy" /><div><h3>Duván Henao</h3><p>Universidad de O’Higgins</p><span class="chip">Chile</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/rosa.webp" alt="" loading="lazy" /><div><h3>Rosa Pardo</h3><p>Universidad Complutense de Madrid</p><span class="chip">España</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/matteo.webp" alt="" loading="lazy" /><div><h3>Matteo Rizzi</h3><p>Universität Gießen</p><span class="chip">Alemania</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/maya.webp" alt="" loading="lazy" /><div><h3>Maya Chhetri</h3><p>University of North Carolina at Greensboro</p><span class="chip">Estados Unidos</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/pablo.webp" alt="" loading="lazy" /><div><h3>Pablo Amster</h3><p>Universidad de Buenos Aires</p><span class="chip">Argentina</span></div></li>
+						<li class="speaker reveal" data-group="int"><img src="images/2027/speakers/ratna.webp" alt="" loading="lazy" /><div><h3>Ratnasingham Shivaji</h3><p>University of North Carolina at Greensboro</p><span class="chip">Estados Unidos</span></div></li>
+
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/jorge.webp" alt="" loading="lazy" /><div><h3>Jorge Cossio</h3><p>Universidad Nacional, Medellín</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/diana.webp" alt="" loading="lazy" /><div><h3>Diana Sánchez</h3><p>Universidad Nacional, Manizales</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/cesar.webp" alt="" loading="lazy" /><div><h3>César Augusto Gómez Sierra</h3><p>Universidad Nacional, Bogotá</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/carlos.webp" alt="" loading="lazy" /><div><h3>Carlos Vélez</h3><p>Universidad Nacional, Medellín</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/elder.webp" alt="" loading="lazy" /><div><h3>Elder Villamizar</h3><p>Universidad Industrial de Santander</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/sigifredo.webp" alt="" loading="lazy" /><div><h3>Sigifredo Herrón</h3><p>Universidad Nacional, Medellín</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/emer.webp" alt="" loading="lazy" /><div><h3>Emer Lopera</h3><p>Universidad Nacional, Manizales</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/arturo.webp" alt="" loading="lazy" /><div><h3>Arturo Sanjuán</h3><p>Universidad Distrital, Bogotá</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/fernando.webp" alt="" loading="lazy" /><div><h3>Fernando Gallego</h3><p>Universidad Nacional, Manizales</p><span class="chip chip--nac">Colombia</span></div></li>
+						<li class="speaker reveal" data-group="nac"><img src="images/2027/speakers/raul.webp" alt="" loading="lazy" /><div><h3>Raúl Quintero</h3><p>Universidad del Valle, Cali</p><span class="chip chip--nac">Colombia</span></div></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- ============ CRONOGRAMA ============ -->
+			<section class="section" id="cronograma">
+				<div class="container">
+					<header class="sec-head sec-head--split reveal">
+						<div>
+							<p class="sec-head__num">03 — Cronograma</p>
+							<h2>Cuatro días de trabajo</h2>
+							<p class="sec-head__lede">
+								Los títulos de las conferencias y sus expositores se anunciarán próximamente.
+								Horarios en hora de Colombia (UTC−5).
+							</p>
+						</div>
+						<a class="btn btn--ghost" id="icsBtn" href="#" download="taller-analisis-no-lineal-2027.ics">
+							<svg><use href="#i-cal" /></svg>Añadir a mi calendario
+						</a>
+					</header>
+
+					<div class="sched reveal">
+						<div class="days" role="tablist" aria-label="Días del taller">
+							<button class="day is-active" role="tab" id="tab-d1" aria-controls="day-1" aria-selected="true" tabindex="0" data-date="2027-06-02"><span class="day__w">Miércoles</span><span class="day__n">02</span><span class="day__m">junio</span><span class="day__c">7 conferencias</span></button>
+							<button class="day" role="tab" id="tab-d2" aria-controls="day-2" aria-selected="false" tabindex="-1" data-date="2027-06-03"><span class="day__w">Jueves</span><span class="day__n">03</span><span class="day__m">junio</span><span class="day__c">9 conferencias</span></button>
+							<button class="day" role="tab" id="tab-d3" aria-controls="day-3" aria-selected="false" tabindex="-1" data-date="2027-06-04"><span class="day__w">Viernes</span><span class="day__n">04</span><span class="day__m">junio</span><span class="day__c">9 conferencias</span></button>
+							<button class="day" role="tab" id="tab-d4" aria-controls="day-4" aria-selected="false" tabindex="-1" data-date="2027-06-05"><span class="day__w">Sábado</span><span class="day__n">05</span><span class="day__m">junio</span><span class="day__c">4 conferencias</span></button>
+						</div>
+						<div class="day-panel" role="tabpanel" id="day-1" aria-labelledby="tab-d1">
+							<p class="day-panel__title">Miércoles 2 de junio de 2027</p>
+							<ol class="slots">
+								<li class="slots__part">Mañana</li>
+								<li class="slot slot--open" data-start="2027-06-02T08:30" data-end="2027-06-02T09:00"><time class="slot__t" datetime="2027-06-02T08:30-05:00">08:30<span>09:00</span></time><div class="slot__b"><span class="slot__type">Inauguración</span><span class="slot__sub">Apertura oficial del taller</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-02T09:00" data-end="2027-06-02T10:00"><time class="slot__t" datetime="2027-06-02T09:00-05:00">09:00<span>10:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-02T10:00" data-end="2027-06-02T10:30"><time class="slot__t" datetime="2027-06-02T10:00-05:00">10:00<span>10:30</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-02T10:30" data-end="2027-06-02T11:30"><time class="slot__t" datetime="2027-06-02T10:30-05:00">10:30<span>11:30</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-02T11:30" data-end="2027-06-02T12:00"><time class="slot__t" datetime="2027-06-02T11:30-05:00">11:30<span>12:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--lunch" data-start="2027-06-02T12:00" data-end="2027-06-02T14:30"><time class="slot__t" datetime="2027-06-02T12:00-05:00">12:00<span>14:30</span></time><div class="slot__b"><span class="slot__type">Almuerzo</span><span class="slot__sub">Libre</span></div><span class="slot__d">2 h 30</span></li>
+								<li class="slots__part">Tarde</li>
+								<li class="slot slot--talk" data-start="2027-06-02T14:30" data-end="2027-06-02T15:00"><time class="slot__t" datetime="2027-06-02T14:30-05:00">14:30<span>15:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-02T15:00" data-end="2027-06-02T15:30"><time class="slot__t" datetime="2027-06-02T15:00-05:00">15:00<span>15:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-02T15:30" data-end="2027-06-02T16:00"><time class="slot__t" datetime="2027-06-02T15:30-05:00">15:30<span>16:00</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-02T16:00" data-end="2027-06-02T17:00"><time class="slot__t" datetime="2027-06-02T16:00-05:00">16:00<span>17:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-02T17:00" data-end="2027-06-02T17:30"><time class="slot__t" datetime="2027-06-02T17:00-05:00">17:00<span>17:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--culture" data-start="2027-06-02T17:30" data-end="2027-06-02T18:00"><time class="slot__t" datetime="2027-06-02T17:30-05:00">17:30<span>18:00</span></time><div class="slot__b"><span class="slot__type">Actividad cultural</span><span class="slot__sub">Por anunciar</span></div><span class="slot__d">30 min</span></li>
+							</ol>
+						</div>
+						<div class="day-panel" role="tabpanel" id="day-2" aria-labelledby="tab-d2" hidden>
+							<p class="day-panel__title">Jueves 3 de junio de 2027</p>
+							<ol class="slots">
+								<li class="slots__part">Mañana</li>
+								<li class="slot slot--talk" data-start="2027-06-03T08:30" data-end="2027-06-03T09:00"><time class="slot__t" datetime="2027-06-03T08:30-05:00">08:30<span>09:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-03T09:00" data-end="2027-06-03T10:00"><time class="slot__t" datetime="2027-06-03T09:00-05:00">09:00<span>10:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-03T10:00" data-end="2027-06-03T10:30"><time class="slot__t" datetime="2027-06-03T10:00-05:00">10:00<span>10:30</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-03T10:30" data-end="2027-06-03T11:30"><time class="slot__t" datetime="2027-06-03T10:30-05:00">10:30<span>11:30</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-03T11:30" data-end="2027-06-03T12:00"><time class="slot__t" datetime="2027-06-03T11:30-05:00">11:30<span>12:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--lunch" data-start="2027-06-03T12:00" data-end="2027-06-03T14:30"><time class="slot__t" datetime="2027-06-03T12:00-05:00">12:00<span>14:30</span></time><div class="slot__b"><span class="slot__type">Almuerzo</span><span class="slot__sub">Libre</span></div><span class="slot__d">2 h 30</span></li>
+								<li class="slots__part">Tarde</li>
+								<li class="slot slot--talk" data-start="2027-06-03T14:30" data-end="2027-06-03T15:00"><time class="slot__t" datetime="2027-06-03T14:30-05:00">14:30<span>15:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-03T15:00" data-end="2027-06-03T15:30"><time class="slot__t" datetime="2027-06-03T15:00-05:00">15:00<span>15:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-03T15:30" data-end="2027-06-03T16:00"><time class="slot__t" datetime="2027-06-03T15:30-05:00">15:30<span>16:00</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-03T16:00" data-end="2027-06-03T17:00"><time class="slot__t" datetime="2027-06-03T16:00-05:00">16:00<span>17:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-03T17:00" data-end="2027-06-03T17:30"><time class="slot__t" datetime="2027-06-03T17:00-05:00">17:00<span>17:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-03T17:30" data-end="2027-06-03T18:00"><time class="slot__t" datetime="2027-06-03T17:30-05:00">17:30<span>18:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--culture" data-start="2027-06-03T18:30" data-end="2027-06-03T19:00"><time class="slot__t" datetime="2027-06-03T18:30-05:00">18:30<span>19:00</span></time><div class="slot__b"><span class="slot__type">Actividad cultural</span><span class="slot__sub">Por anunciar</span></div><span class="slot__d">30 min</span></li>
+							</ol>
+						</div>
+						<div class="day-panel" role="tabpanel" id="day-3" aria-labelledby="tab-d3" hidden>
+							<p class="day-panel__title">Viernes 4 de junio de 2027</p>
+							<ol class="slots">
+								<li class="slots__part">Mañana</li>
+								<li class="slot slot--talk" data-start="2027-06-04T08:30" data-end="2027-06-04T09:00"><time class="slot__t" datetime="2027-06-04T08:30-05:00">08:30<span>09:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-04T09:00" data-end="2027-06-04T10:00"><time class="slot__t" datetime="2027-06-04T09:00-05:00">09:00<span>10:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-04T10:00" data-end="2027-06-04T10:30"><time class="slot__t" datetime="2027-06-04T10:00-05:00">10:00<span>10:30</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-04T10:30" data-end="2027-06-04T11:30"><time class="slot__t" datetime="2027-06-04T10:30-05:00">10:30<span>11:30</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-04T11:30" data-end="2027-06-04T12:00"><time class="slot__t" datetime="2027-06-04T11:30-05:00">11:30<span>12:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--lunch" data-start="2027-06-04T12:00" data-end="2027-06-04T14:30"><time class="slot__t" datetime="2027-06-04T12:00-05:00">12:00<span>14:30</span></time><div class="slot__b"><span class="slot__type">Almuerzo</span><span class="slot__sub">Libre</span></div><span class="slot__d">2 h 30</span></li>
+								<li class="slots__part">Tarde</li>
+								<li class="slot slot--talk" data-start="2027-06-04T14:30" data-end="2027-06-04T15:00"><time class="slot__t" datetime="2027-06-04T14:30-05:00">14:30<span>15:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-04T15:00" data-end="2027-06-04T15:30"><time class="slot__t" datetime="2027-06-04T15:00-05:00">15:00<span>15:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--break" data-start="2027-06-04T15:30" data-end="2027-06-04T16:00"><time class="slot__t" datetime="2027-06-04T15:30-05:00">15:30<span>16:00</span></time><div class="slot__b"><span class="slot__type">Pausa café</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-04T16:00" data-end="2027-06-04T17:00"><time class="slot__t" datetime="2027-06-04T16:00-05:00">16:00<span>17:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-04T17:00" data-end="2027-06-04T17:30"><time class="slot__t" datetime="2027-06-04T17:00-05:00">17:00<span>17:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-04T17:30" data-end="2027-06-04T18:00"><time class="slot__t" datetime="2027-06-04T17:30-05:00">17:30<span>18:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+							</ol>
+						</div>
+						<div class="day-panel" role="tabpanel" id="day-4" aria-labelledby="tab-d4" hidden>
+							<p class="day-panel__title">Sábado 5 de junio de 2027</p>
+							<ol class="slots">
+								<li class="slots__part">Mañana</li>
+								<li class="slot slot--talk" data-start="2027-06-05T08:30" data-end="2027-06-05T09:00"><time class="slot__t" datetime="2027-06-05T08:30-05:00">08:30<span>09:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-05T09:00" data-end="2027-06-05T09:30"><time class="slot__t" datetime="2027-06-05T09:00-05:00">09:00<span>09:30</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--talk" data-start="2027-06-05T09:30" data-end="2027-06-05T10:00"><time class="slot__t" datetime="2027-06-05T09:30-05:00">09:30<span>10:00</span></time><div class="slot__b"><span class="slot__type">Conferencia</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">30 min</span></li>
+								<li class="slot slot--plen" data-start="2027-06-05T10:00" data-end="2027-06-05T11:00"><time class="slot__t" datetime="2027-06-05T10:00-05:00">10:00<span>11:00</span></time><div class="slot__b"><span class="slot__type">Conferencia plenaria</span><span class="slot__sub">Expositor por anunciar</span></div><span class="slot__d">60 min</span></li>
+							</ol>
+						</div>
+						<ul class="legend" aria-label="Convenciones">
+							<li class="legend--plen">Plenaria · 60 min</li><li class="legend--talk">Conferencia · 30 min</li><li class="legend--break">Pausas</li><li class="legend--culture">Actividad cultural</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ PONENCIAS ============ -->
+			<section class="section section--alt" id="ponencias">
+				<div class="container">
+					<div class="call reveal">
+						<div class="call__body">
+							<p class="sec-head__num">04 — Ponencias</p>
+							<h2>Recepción de trabajos</h2>
+							<p class="call__lede">
+								Invitamos a la comunidad matemática a postular la presentación de sus resultados
+								de investigación.
+							</p>
+							<ol class="steps">
+								<li>
+									<b>Prepara tu resumen</b>
+									<span>Máximo dos páginas, en formato PDF.</span>
+								</li>
+								<li>
+									<b>Elige la modalidad</b>
+									<span>Las postulaciones serán consideradas como ponencia o como póster.</span>
+								</li>
+								<li>
+									<b>Envíalo por correo</b>
+									<span>A <a href="mailto:caramirez@utp.edu.co">caramirez@utp.edu.co</a> antes de la fecha límite.</span>
+								</li>
+							</ol>
+						</div>
+
+						<aside class="deadline" aria-label="Fecha límite">
+							<p class="deadline__k">Fecha límite</p>
+							<p class="deadline__date"><b>22</b><span>marzo<br />2027</span></p>
+							<p class="deadline__left" id="deadlineLeft" data-target="2027-03-22T23:59:59-05:00">&nbsp;</p>
+							<a class="btn btn--accent btn--block" href="mailto:caramirez@utp.edu.co?subject=Postulaci%C3%B3n%20%E2%80%94%20VIII%20Taller%20de%20An%C3%A1lisis%20No%20Lineal%202027">
+								<svg><use href="#i-mail" /></svg>Enviar resumen
+							</a>
+							<button class="copy" type="button" data-copy="caramirez@utp.edu.co">
+								<svg><use href="#i-copy" /></svg><span>caramirez@utp.edu.co</span>
+							</button>
+						</aside>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ HOTEL ============ -->
+			<section class="section" id="hotel">
+				<div class="container">
+					<header class="sec-head reveal">
+						<p class="sec-head__num">05 — Hotel</p>
+						<h2>Hotel Álamos del Parque</h2>
+						<p class="sec-head__lede">Alojamiento recomendado con tarifa corporativa para participantes del taller.</p>
+					</header>
+
+					<div class="hotel">
+						<div class="hotel__gallery reveal" id="gallery">
+							<button class="g g--main" data-full="images/2027/hotel/exterior.webp" data-caption="Hotel Álamos del Parque"><img src="images/2027/hotel/exterior.webp" alt="Hotel Álamos del Parque" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/fachada.webp" data-caption="Fachada"><img src="images/2027/hotel/fachada.webp" alt="Fachada" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/lobby.webp" data-caption="Lobby principal"><img src="images/2027/hotel/lobby.webp" alt="Lobby principal" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/lobby2.webp" data-caption="Otro ángulo del lobby"><img src="images/2027/hotel/lobby2.webp" alt="Otro ángulo del lobby" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/superior.webp" data-caption="Habitación Superior Estándar"><img src="images/2027/hotel/superior.webp" alt="Habitación Superior Estándar" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/semidobles.webp" data-caption="Habitación dos camas semidobles"><img src="images/2027/hotel/semidobles.webp" alt="Habitación dos camas semidobles" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/balcon.webp" data-caption="Habitación con balcón"><img src="images/2027/hotel/balcon.webp" alt="Habitación con balcón" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/familiar.webp" data-caption="Suite familiar"><img src="images/2027/hotel/familiar.webp" alt="Suite familiar" loading="lazy" /></button>
+							<button class="g" data-full="images/2027/hotel/sencilla.webp" data-caption="Habitación sencilla"><img src="images/2027/hotel/sencilla.webp" alt="Habitación sencilla" loading="lazy" /></button>
+						</div>
+
+						<div class="hotel__info reveal">
+							<div class="rates">
+								<div class="rates__head">
+									<h3>Tarifas corporativas</h3>
+									<span>por noche · IVA incluido</span>
+								</div>
+								<table>
+									<tbody>
+										<tr><th scope="row">Superior estándar <small>1 persona</small></th><td>$223.720</td></tr>
+										<tr><th scope="row">Cama doble matrimonial <small>2 personas</small></th><td>$259.420</td></tr>
+										<tr><th scope="row">Dos camas semidobles <small>2 personas</small></th><td>$259.420</td></tr>
+										<tr><th scope="row">Habitación con balcón</th><td>$279.650</td></tr>
+										<tr><th scope="row">Suite familiar</th><td>$460.530</td></tr>
+									</tbody>
+								</table>
+								<p class="rates__note">
+									Incluye seguro hotelero y desayuno (7:00 a 10:00 a. m.; desayuno para llevar
+									antes de las 7:00 bajo solicitud). Pago al momento del check-in. Tarifas de
+									referencia, sujetas a confirmación con el hotel.
+								</p>
+							</div>
+
+							<p class="hotel__extra">
+								¿Almuerzo o cena? El hotel puede armar un paquete completo con el servicio de
+								Pintadito Café – Restaurante.
+							</p>
+
+							<ul class="contact">
+								<li><svg><use href="#i-pin" /></svg><span>Calle 13 #24-139, barrio Los Álamos</span><a href="https://maps.app.goo.gl/wLBFpY5NvTFXaeAPA" target="_blank" rel="noopener">Ver mapa <svg><use href="#i-out" /></svg></a></li>
+								<li><svg><use href="#i-phone" /></svg><span>(606) 326 42 37 · 304 659 3798</span><a href="tel:+573046593798">Llamar</a></li>
+								<li><svg><use href="#i-mail" /></svg><span>reservas@hotelalamosdelparque.com</span><a href="mailto:reservas@hotelalamosdelparque.com">Escribir</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ PEREIRA ============ -->
+			<section class="section section--alt" id="pereira">
+				<div class="container">
+					<header class="sec-head reveal">
+						<p class="sec-head__num">06 — Pereira</p>
+						<h2>La ciudad sede</h2>
+						<p class="sec-head__lede">
+							En el corazón del Paisaje Cultural Cafetero, Pereira está conectada con el país a través
+							del Aeropuerto Internacional Matecaña.
+						</p>
+					</header>
+
+					<div class="city">
+						<div class="video reveal" id="video" data-yt="LH5Dhiwt3K0">
+							<img src="images/2027/pereira.webp" alt="Vista de Pereira" loading="lazy" />
+							<button class="video__play" type="button" aria-label="Reproducir video sobre Pereira">
+								<svg><use href="#i-play" /></svg>
+							</button>
+							<span class="video__label">Conoce Pereira · video</span>
+						</div>
+
+						<ul class="links reveal">
+							<li><a href="https://aeromate.gov.co/" target="_blank" rel="noopener"><svg class="links__i"><use href="#i-plane" /></svg><span><b>Aeropuerto Matecaña</b>Vuelos y conexiones</span><svg class="links__go"><use href="#i-out" /></svg></a></li>
+							<li><a href="https://cotelcorisaralda.org/afiliados/" target="_blank" rel="noopener"><svg class="links__i"><use href="#i-bed" /></svg><span><b>Otros hoteles</b>Afiliados a Cotelco Risaralda</span><svg class="links__go"><use href="#i-out" /></svg></a></li>
+							<li><a href="https://utp.edu.co/" target="_blank" rel="noopener"><svg class="links__i"><use href="#i-uni" /></svg><span><b>Universidad Tecnológica de Pereira</b>Departamento de Matemáticas</span><svg class="links__go"><use href="#i-out" /></svg></a></li>
+						</ul>
+					</div>
+
+					<div class="venues">
+						<figure class="reveal"><img src="images/2027/auditorio.webp" alt="Sala Magistral 2, Bloque 13" loading="lazy" /><figcaption>Sala Magistral 2 · Bloque 13, UTP</figcaption></figure>
+						<figure class="reveal"><img src="images/2027/teatro.webp" alt="Teatro Bellas Artes" loading="lazy" /><figcaption>Teatro Bellas Artes</figcaption></figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ TALLERES PREVIOS ============ -->
+			<section class="section" id="historia">
+				<div class="container history">
+					<header class="sec-head reveal">
+						<p class="sec-head__num">07 — Talleres previos</p>
+						<h2>Una tradición desde 2010</h2>
+						<p class="sec-head__lede">
+							Fundado por los profesores José Francisco Caicedo y Alfonso Castro, el Taller de Análisis
+							No Lineal y Ecuaciones Diferenciales Parciales se ha realizado en Colombia con los
+							esfuerzos conjuntos de la Universidad Nacional, la Universidad Sergio Arboleda, la
+							Universidad Distrital y la Universidad Tecnológica de Pereira.
+						</p>
+						<p class="sec-head__lede">
+							Ha contado con investigadores como Peter Bates, Mónica Clapp, Bernhard Ruf,
+							Ratnasingham Shivaji, Marcelo dos Santos, Filomena Pacella, Julio Rossi, Pablo Amster,
+							Jaime Navarro y Rosa Pardo, entre otros.
+						</p>
+					</header>
+
+					<ol class="timeline reveal">
+						<li><a href="https://www.math.hmc.edu/~castro/TallerBogota.html" target="_blank" rel="noopener"><span class="timeline__n">I</span><span class="timeline__y">2010</span><span class="timeline__p">Universidad Nacional de Colombia · Bogotá</span><svg><use href="#i-out" /></svg></a></li>
+						<li><div><span class="timeline__n">II</span><span class="timeline__y">2012</span><span class="timeline__p">Universidad Nacional de Colombia · Bogotá</span></div></li>
+						<li><a href="https://sites.google.com/unal.edu.co/iii-taller-analisis-no-lineal" target="_blank" rel="noopener"><span class="timeline__n">III</span><span class="timeline__y">2015</span><span class="timeline__p">Universidad Sergio Arboleda · Bogotá</span><svg><use href="#i-out" /></svg></a></li>
+						<li><a href="http://investigacion.unal.edu.co/boletin/notas-boletin-un-investiga/news/iv-taller-internacional-de-analisis-no-lineal-y-ecuaciones-diferenciales-parciales/" target="_blank" rel="noopener"><span class="timeline__n">IV</span><span class="timeline__y">2017</span><span class="timeline__p">Universidad Nacional de Colombia · Manizales</span><svg><use href="#i-out" /></svg></a></li>
+						<li><a href="https://sites.google.com/unal.edu.co/vtaller/home" target="_blank" rel="noopener"><span class="timeline__n">V</span><span class="timeline__y">2019</span><span class="timeline__p">Universidad Nacional de Colombia · Bogotá</span><svg><use href="#i-out" /></svg></a></li>
+						<li><a href="https://sites.google.com/unal.edu.co/talleranalisisnolineal2023/home" target="_blank" rel="noopener"><span class="timeline__n">VI</span><span class="timeline__y">2023</span><span class="timeline__p">Universidad Nacional de Colombia · Manizales</span><svg><use href="#i-out" /></svg></a></li>
+						<li class="timeline__hl"><a href="2025/"><span class="timeline__n">VII</span><span class="timeline__y">2025</span><span class="timeline__p">Universidad Tecnológica de Pereira · Pereira <em>Ver sitio de la edición</em></span><svg><use href="#i-arrow" /></svg></a></li>
+						<li class="timeline__now"><div><span class="timeline__n">VIII</span><span class="timeline__y">2027</span><span class="timeline__p">Universidad Tecnológica de Pereira · Pereira <em>Esta edición</em></span></div></li>
+					</ol>
+				</div>
+			</section>
+		</main>
+
+		<!-- ============ FOOTER ============ -->
+		<footer class="footer">
+			<div class="stripe" aria-hidden="true"></div>
+			<div class="container footer__inner">
+				<div class="footer__brand">
+					<img src="images/2027/logo-utp.webp" alt="Universidad Tecnológica de Pereira" width="80" height="48" loading="lazy" />
+					<p>
+						<b>VIII Taller Internacional de Análisis No Lineal y Ecuaciones Diferenciales Parciales</b>
+						2 – 5 de junio de 2027 · Universidad Tecnológica de Pereira
+					</p>
+				</div>
+				<nav class="footer__nav" aria-label="Pie de página">
+					<a href="#cronograma">Cronograma</a>
+					<a href="#ponencias">Ponencias</a>
+					<a href="#hotel">Hotel</a>
+					<a href="2025/">Edición 2025</a>
+				</nav>
+				<p class="footer__contact">
+					Contacto<br /><a href="mailto:caramirez@utp.edu.co">caramirez@utp.edu.co</a>
+				</p>
+			</div>
+		</footer>
+
+		<!-- Lightbox -->
+		<dialog class="lightbox" id="lightbox" aria-label="Galería de imágenes">
+			<button class="lightbox__close" type="button" aria-label="Cerrar"><svg><use href="#i-x" /></svg></button>
+			<button class="lightbox__nav lightbox__prev" type="button" aria-label="Anterior"><svg><use href="#i-chev" /></svg></button>
+			<figure><img alt="" /><figcaption></figcaption></figure>
+			<button class="lightbox__nav lightbox__next" type="button" aria-label="Siguiente"><svg><use href="#i-chev" /></svg></button>
+		</dialog>
+
+		<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+		<script src="static/js/site.js" defer></script>
 	</body>
 </html>
