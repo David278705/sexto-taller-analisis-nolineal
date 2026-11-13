@@ -341,6 +341,7 @@ svg {
 .mobile-menu {
 	position: fixed;
 	inset: var(--nav-h) 0 0;
+	z-index: 49;
 	padding: 24px var(--gutter) 32px;
 	background: rgba(7, 12, 23, 0.97);
 	backdrop-filter: blur(16px);
