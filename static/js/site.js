@@ -273,11 +273,23 @@
 		raf = 0;
 
 	const toScreen = (x, y) => [W / 2 + x * SX, H / 2 - y * SY];
+	// Velocidad en unidades del plano de fase por segundo (muy lenta: deriva "espacial")
+	const SPEED = 0.11;
+	const TRAIL = 34; // puntos de la estela
+	const SAMPLE = 0.12; // segundos entre puntos de la estela
+	const FADE = 2.5; // segundos de fundido al nacer / morir
+	const EDGE = 90; // px de atenuación junto a los bordes
+
 	const spawn = (p) => {
 		p.x = (Math.random() * 2 - 1) * (W / 2 / SX) * 1.05;
 		p.y = (Math.random() * 2 - 1) * (H / 2 / SY) * 1.05;
 		p.age = 0;
-		p.life = 720 + Math.random() * 1280;
+		p.life = 14 + Math.random() * 22; // segundos
+		p.trail = [];
+		p.acc = 0;
+		p.tw = Math.random() * Math.PI * 2; // fase de parpadeo
+		p.r = 0.6 + Math.random() * 0.9;
+		p.dying = false;
 		return p;
 	};
 	const resize = () => {
@@ -290,43 +302,97 @@
 		// El ciclo límite (|x| ≲ 2, |y| ≲ 2.6) ocupa casi todo el hero
 		SX = W / 5.4;
 		SY = H / 6.4;
-		const n = Math.min(520, Math.round((W * H) / 2800));
+		const n = Math.min(420, Math.round((W * H) / 3400));
 		parts = Array.from({ length: n }, () => spawn({}));
-		parts.forEach((p) => (p.age = Math.random() * p.life));
+		parts.forEach((p) => (p.age = Math.random() * p.life * 0.8));
 	};
 
-	const step = () => {
-		ctx.globalCompositeOperation = "destination-out";
-		ctx.fillStyle = "rgba(0,0,0,0.028)";
-		ctx.fillRect(0, 0, W, H);
-		ctx.globalCompositeOperation = "source-over";
-		ctx.lineWidth = 1;
-
-		const warm = new Path2D();
-		const cool = new Path2D();
-		const h = 0.012;
+	const update = (dt) => {
 		for (const p of parts) {
 			const vx = p.y;
 			const vy = MU * (1 - p.x * p.x) * p.y - p.x;
 			const sp = Math.hypot(vx, vy) || 1;
-			const k = Math.min(1, 3 / sp) * h * 0.475;
-			const [ax, ay] = toScreen(p.x, p.y);
+			const k = (Math.min(sp, 3) / sp) * SPEED * dt; // rapidez acotada
 			p.x += vx * k;
 			p.y += vy * k;
-			const [bx, by] = toScreen(p.x, p.y);
-			const path = sp > 2.2 ? warm : cool;
-			path.moveTo(ax, ay);
-			path.lineTo(bx, by);
-			if (++p.age > p.life || bx < -20 || bx > W + 20 || by < -20 || by > H + 20) spawn(p);
+			p.age += dt;
+			p.acc += dt;
+			if (p.acc >= SAMPLE) {
+				p.acc = 0;
+				p.trail.push(toScreen(p.x, p.y));
+				if (p.trail.length > TRAIL) p.trail.shift();
+			}
+			const [sx, sy] = toScreen(p.x, p.y);
+			// Fuera de pantalla: en lugar de desaparecer de golpe, inicia el fundido de salida
+			if (!p.dying && (sx < 0 || sx > W || sy < 0 || sy > H)) {
+				p.dying = true;
+				p.life = Math.min(p.life, p.age + FADE);
+			}
+			if (p.age > p.life) spawn(p);
 		}
-		ctx.strokeStyle = "rgba(255, 196, 102, 0.55)";
-		ctx.stroke(warm);
-		ctx.strokeStyle = "rgba(150, 200, 255, 0.42)";
-		ctx.stroke(cool);
 	};
-	const loop = () => {
-		step();
+
+	// Los segmentos se agrupan por color y nivel de opacidad: pocas llamadas a stroke() por cuadro
+	const LEVELS = 8;
+	const MAX_A = 0.34;
+	const COLORS = ["160, 205, 255", "255, 200, 120"];
+	const buckets = COLORS.map(() => Array.from({ length: LEVELS }, () => new Path2D()));
+	const dots = COLORS.map(() => Array.from({ length: LEVELS }, () => new Path2D()));
+
+	const draw = (t) => {
+		ctx.clearRect(0, 0, W, H);
+		for (let c = 0; c < 2; c++)
+			for (let l = 0; l < LEVELS; l++) {
+				buckets[c][l] = new Path2D();
+				dots[c][l] = new Path2D();
+			}
+		for (const p of parts) {
+			const [hx, hy] = toScreen(p.x, p.y);
+			// Atenuación suave cerca de los bordes (más amplia abajo, donde el hero funde a negro)
+			const edge = Math.min(1, hx / EDGE, (W - hx) / EDGE, hy / EDGE, (H - hy) / (EDGE * 2.2));
+			const life = Math.min(1, p.age / FADE, (p.life - p.age) / FADE) * Math.max(0, edge);
+			if (life <= 0.01) continue;
+			const vx = p.y;
+			const vy = MU * (1 - p.x * p.x) * p.y - p.x;
+			const c = Math.hypot(vx, vy) > 2.2 ? 1 : 0;
+			const tr = p.trail;
+			const n = tr.length;
+			for (let i = 1; i <= n; i++) {
+				const l = Math.min(LEVELS - 1, Math.floor((i / n) * life * LEVELS));
+				if (l < 0) continue;
+				const a = tr[i - 1];
+				const b = i < n ? tr[i] : [hx, hy];
+				buckets[c][l].moveTo(a[0], a[1]);
+				buckets[c][l].lineTo(b[0], b[1]);
+			}
+			// Cabeza: pequeña estrella con parpadeo
+			const tw = 0.6 + 0.4 * Math.sin(t * 1.3 + p.tw);
+			const l = Math.min(LEVELS - 1, Math.floor(life * tw * LEVELS));
+			dots[c][l].moveTo(hx + p.r, hy);
+			dots[c][l].arc(hx, hy, p.r, 0, Math.PI * 2);
+		}
+		ctx.lineWidth = 1;
+		ctx.lineCap = "round";
+		for (let c = 0; c < 2; c++)
+			for (let l = 0; l < LEVELS; l++) {
+				const k = (l + 1) / LEVELS;
+				ctx.strokeStyle = `rgba(${COLORS[c]}, ${(k * MAX_A).toFixed(3)})`;
+				ctx.stroke(buckets[c][l]);
+				ctx.fillStyle = `rgba(${COLORS[c]}, ${(k * 0.95).toFixed(3)})`;
+				ctx.fill(dots[c][l]);
+			}
+	};
+
+	let last = 0;
+	const loop = (now) => {
+		const dt = last ? Math.min((now - last) / 1000, 0.1) : 0;
+		last = now;
+		update(dt);
+		draw(now / 1000);
 		raf = requestAnimationFrame(loop);
+	};
+	const warmUp = () => {
+		for (let i = 0; i < 300; i++) update(1 / 30); // estelas ya formadas al cargar
 	};
 	const play = () => {
 		if (running || reduceMotion) return;
@@ -335,12 +401,14 @@
 	};
 	const pause = () => {
 		running = false;
+		last = 0;
 		cancelAnimationFrame(raf);
 	};
 
 	resize();
+	warmUp();
 	if (reduceMotion) {
-		for (let i = 0; i < 90; i++) step(); // imagen estática
+		draw(0); // imagen estática
 	} else {
 		new IntersectionObserver(([en]) => (en.isIntersecting ? play() : pause())).observe(cv);
 		document.addEventListener("visibilitychange", () => (document.hidden ? pause() : play()));
@@ -352,7 +420,8 @@
 			const w = cv.clientWidth;
 			if (Math.abs(w - W) > 40 || Math.abs(cv.clientHeight - H) > 120) {
 				resize();
-				if (reduceMotion) for (let i = 0; i < 90; i++) step();
+				warmUp();
+				if (reduceMotion) draw(0);
 			}
 		}, 200);
 	});
